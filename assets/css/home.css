@@ -76,6 +76,146 @@
     color: #F8F9FA;
 }
 
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ASIDE */
+aside{
+    font-family: 'Poppins', sans-serif;
+    width:320px;
+    height: 583px;
+    margin-right: 115px;  
+}
+
+    .title--cart{
+        display: flex;
+        align-items: center;
+        background-color: #FF2253;
+        height: 56px;
+        border-radius: 8px 8px 0 0;
+        color: white; 
+    }
+
+    .title--cart img{
+        margin-left: 23px;
+    }
+
+    .title--cart p{
+        margin-left: 20px;
+    }
+
+    .container--empty{
+        width: 319px;
+        height: 296px;
+        background-color: #F8F9FA;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    .container--empty img{
+        margin-bottom: 35px; 
+    }
+
+    .container--empty p{
+        color: #868E96;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 24px;
+    }
+
+    .container{
+        overflow-y: scroll;
+        margin-left: 9.5px;
+        height: 330px;
+    }
+
+   
+
+    .card{
+        display:flex;
+        margin-top: 23px;
+        margin-bottom: 20px;
+    }
+
+    .card--image img{
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+    }
+
+    .card--infos{
+        margin-left: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card--infos p{
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .card--infos span{
+        color: #868E96;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .card--infos .infos--price{
+        color: #212529;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .card--remove{
+        margin-left: 17px;
+    }
+    .card--remove button{
+        width: 25px;
+        height: 25px;       
+        border: none;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F8F9FA;
+    }
+
+    .container--total{
+        width: 319px;
+        height: 58px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .container--total--grey{
+        background-color: #F8F9FA;
+    }
+
+    .container--total p{
+        margin-left: 18px; 
+    }
+
+    .container--total span{
+        margin-right: 19px;
+    }
+
+    .hidden{
+        display:none;
+    }
+
+
 @media (min-width: 1024px){
     .title--top{
         flex-direction: row;
