@@ -8,6 +8,8 @@ export class ShowCase {
 
     async showProducts () {
       const products = await KenzieFood.getProducts()
-      console.log(products)
+      this.products = products
+
+      
     }
 }
