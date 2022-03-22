@@ -1,0 +1,71 @@
+/*estilização card*/
+.card{
+    font-family: 'Poppins', sans-serif;
+    width: 303px;
+    height: 397px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card_description{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 16px;
+}
+.card_description h2{
+    font-weight: 500;
+    font-size: 16px;
+}
+.card_description p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #868E96;
+    width: 300px;
+    height: 30px;
+    overflow: hidden;
+}
+.card_description_category{
+    font-weight: 400;
+    font-size: 12px;
+    color: #868E96;
+    
+}
+.card_description_footer{
+    display: flex;
+    justify-content: space-between;
+}
+.card_description_footer button{
+    width: 39px;
+    height: 38px;
+    border: none;
+    background-color: #E4F7EF;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+
+    
+}
+.card_description_footer button:after{
+    content: "\f217";
+    font-family: 'Font Awesome 5 Free';
+    font-size: 12px;
+    line-height: 14px;
+    font: normal normal normal 14px/1 FontAwesome !important;
+}
+.card_description_footer button:hover{
+    background-color: #0CA678;
+    color: #E4F7EF;;
+}
+
+.card_description_footer h4{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.card_pic svg{
+    height: 200px;
+    width: 300px;
+
+}
