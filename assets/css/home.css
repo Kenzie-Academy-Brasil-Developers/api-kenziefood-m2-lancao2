@@ -34,8 +34,24 @@
 .title--search:focus{
     background-color: #F8F9FA;
     border-color: #212529;;
-
 }
+
+.nav--top {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.nav--top::-webkit-scrollbar {
+  border: 1px solid #FFFFFF;
+  height: 3px;
+}
+
+.nav--top::-webkit-scrollbar-thumb {
+  background: #FF2253;   
+  border: none;
+  border-radius: 15px;
+}
+
 .nav--button{
     background: #FFF7F4;
     font-family: 'Inter', sans-serif;
@@ -72,4 +88,8 @@
     .title--search{
         margin: 0px 117px 0px auto;
     }
+
+    .nav--top::-webkit-scrollbar {
+      display: none;
+    }  
 }
