@@ -121,7 +121,7 @@ aside{
 
    
 
-    .card{
+    .card--cart{
         display:flex;
         margin-top: 23px;
         margin-bottom: 20px;
