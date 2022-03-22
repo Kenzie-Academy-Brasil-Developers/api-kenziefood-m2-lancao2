@@ -1,0 +1,92 @@
+html{
+    background-color: #E4F7EF;
+    font-family: 'Poppins', sans-serif;
+}
+.title--top{
+    margin-top:  21px ;
+    display: flex;
+    flex-direction: column;
+}
+.title--logo--black, .nav--top{
+    margin-left: 18px;
+}
+.title--logo{
+    margin-bottom: 10px;
+}
+.title--logo--black{
+    color: #212529;
+    font-weight: 700;
+    font-size: 21.6949px;
+    line-height: 33px;
+}
+.title--logo--red{
+    font-weight: 700;
+    font-size: 16.2712px;
+    line-height: 24px;
+    color: #FF2253;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login--div{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60vw;
+    height: 70vh;
+    background-color:#FF2253 ;
+    border-radius: 12px;
+}
+.login--title{
+    text-align: center;
+    color: #FFE9EE;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+.field{
+    background: #E9ECEF;
+    padding: 15px 18px 15px 16px;
+    border: 1.5px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+.field:focus{
+    background-color: #F8F9FA;
+    border-color: #212529;
+}
+.login--button{
+    background: #FFF7F4;
+    font-family: 'Inter', sans-serif;
+    padding: 15px 20px;
+    border: 1.5px solid #FFF7F4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #212529;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+.link--text{
+    font-size: 0.8em;
+    text-align: center;
+    margin: 2px;
+    color:#FFF7F4;
+}
+
+a:hover{
+    color: #0CA678;
+}
