@@ -2,18 +2,15 @@ import { KenzieFood } from "../utils/KenzieFood.js"
 import { createCard } from "../utils/functions.js"
 
 export class ShowCase {
-    constructor (container) {
-      this.container = container
-      this.products = []
-    }
-
-    async showProducts () {
+    static container = document.querySelector('.products-container')
+    static products = []
+   
+    static async showProducts () {
       const products = await KenzieFood.getProducts()
-      this.products = products
+      ShowCase.products = products
 
       this.products.forEach(product => {
-        this.container.innerHTML += createCard(product)
-        console.log(this.container)
+        ShowCase.container.innerHTML += createCard(product)
       })
     }
 }
