@@ -14,4 +14,15 @@ export const KenzieFood = class {
         console.log(products)
         // Vitrine.template(products)
   }
+
+  static async addCart(event, data){
+    const cart = document.querySelector('.container');
+
+    const products = data.find((el) =>{
+      
+    })
+
+    console.log(cart)
+  }
+
 }
