@@ -48,13 +48,16 @@ body{
     color: #FFE9EE;
     font-weight: 700;
     font-size: 1.5em;
+    margin: 10px;
 }
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-grow: 3;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .field{
     background: #E9ECEF;
@@ -85,6 +88,7 @@ form{
     text-align: center;
     margin: 2px;
     color:#FFF7F4;
+    margin: 10px;
 }
 
 a:hover{
