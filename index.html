@@ -7,6 +7,10 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+
   <!-- styles -->
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/home.css">
@@ -25,7 +29,7 @@
     </div>
     <nav>
       <ul class="nav--top">
-        <li> <button class="button nav--button">Todos</button></li>
+        <li> <button class="button nav--button" id="todos">Todos</button></li>
         <li>
           <button class="button nav--button">
             <img src="./src/icons/Icon_bread.png" alt="Bread Icon">Panificadora
@@ -45,11 +49,103 @@
     </nav>
   </header>
   <main>
-    <section></section>
-    <aside></aside>
+    <section class="products-container">
+      <!-- <div class="card"> 
+        <div class="card_pic">
+          
+        </div>
+        <div class="card_description">
+          <h2>Panqueca de banana com aveia </h2>
+          <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito, se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+          <div class="card_description_category">
+            <span>Panificadora</span>
+            <span>Frutas</span>
+          </div>
+          <div class="card_description_footer">
+            <h4>R$ 20,00</h4>
+            <button>
+              <span> </span>
+            </button>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <aside>
+      <div class="title--cart"> <img src="./src/icons/icon_cart.png" alt=""> <p>Carrinho</p> </div>
+      <div class="container--empty">
+          <img src="./src/img/img_cart_empty.png" alt="">
+          <p>Por enquanto não temos produtos no carrinho</p>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card--image">
+            <img src="/src/img/product1.png" alt="">
+          </div>
+          <div class="card--infos">
+            <p>Panqueca de banana</p>
+            <span>Panificadora</span>
+            <span class="infos--price">R$ 20,00</span>
+          </div>
+          <div class="card--remove">
+            <button><img src="./src/icons/icon_trash.png" alt=""></button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card--image">
+            <img src="/src/img/product2.png" alt="">
+          </div>
+          <div class="card--infos">
+            <p>Panqueca de banana</p>
+            <span>Panificadora</span>
+            <span class="infos--price">R$ 20,00</span>
+          </div>
+          <div class="card--remove">
+            <button><img src="./src/icons/icon_trash.png" alt=""></button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card--image">
+            <img src="/src/img/product3.png" alt="">
+          </div>
+          <div class="card--infos">
+            <p>Panqueca de banana</p>
+            <span>Panificadora</span>
+            <span class="infos--price">R$ 20,00</span>
+          </div>
+          <div class="card--remove">
+            <button><img src="./src/icons/icon_trash.png" alt=""></button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card--image">
+            <img src="/src/img/product4.png" alt="">
+          </div>
+          <div class="card--infos">
+            <p>Panqueca de banana</p>
+            <span>Panificadora</span>
+            <span class="infos--price">R$ 20,00</span>
+          </div>
+          <div class="card--remove">
+            <button><img src="./src/icons/icon_trash.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container--total container--total--grey hidden">
+        <p>Quantidade</p>
+        <span>10</span>
+      </div>
+
+      <div class="container--total">
+        <p>Total</p>
+        <span>R$ 85,00</span>
+      </div>
+    </aside>
+    <button class="cart_Button">  Carrinho</button>
   </main>
   <footer></footer>
 <!-- scripts -->
+  <script src="https://kit.fontawesome.com/6e9eea67d0.js" crossorigin="anonymous"></script>
   <script type ="module" src="main.js"></script>
 </body>
 </html>
