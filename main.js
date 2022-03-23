@@ -62,6 +62,3 @@ categoryButtonsNav.addEventListener('click', filterProducts)
 
 const showCaseContainer = ShowCase.container
 showCaseContainer.addEventListener('click', addToCart)
-
-
-
