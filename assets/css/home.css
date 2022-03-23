@@ -263,6 +263,22 @@ aside{
     height: 320px;
     background-color: #E4F7EF;
 }
+.container::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+.container::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+    
+}
+.container::-webkit-scrollbar-thumb {
+    background: #868E96;
+    border-radius: 5px;
+}
+
+#todos{
+    height: 57px;
+}
 
 
 .card--cart{
@@ -340,44 +356,18 @@ aside{
     display:none;
 }
 
-
-@media (min-width: 426px){
-    .title--top{
-        flex-direction: row;
-        height: 72px;
-        align-items: center;
-        width: 100%;
-    }
-    .title--logo--black, .nav--top{
-        margin-left: 117px;
-    }
-    .title--search{
-        margin: 0px 117px 0px auto;
-    }
-
-    .nav--top::-webkit-scrollbar {
-      display: none;
-    }  
-    .cart_Button_callModel{
-        display: none !important;
-    }
-    .products-container{
-        flex-wrap: wrap;
-    }
-}
-
 /* PRODUCT CONTEINER */
 
 .products-container{
     display: flex;
-    overflow-y: scroll;
-    column-gap: 20px;
+    overflow-x: scroll;
     margin-left: 18px;
+    justify-content: space-around;
 }
 main{
     display: flex;
     flex-direction: column;
-    height: 457px;
+    height: 100%;
 }
 main #modalButton{
     width: 100vw;
@@ -399,7 +389,7 @@ main #modalButton{
     font: normal normal normal 14px/1 FontAwesome !important;
 }
 
-@media (min-width: 426px){
+@media (min-width: 769px){
     .title--top{
         flex-direction: row;
         height: 72px;
@@ -420,19 +410,38 @@ main #modalButton{
         display: none !important;
     }
     .products-container{
-        column-count: 3;
-        display: block;
-        overflow-y: hidden;
-        max-width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: revert; 
+    }
+    
+    .title--top{
+        flex-direction: row;
+        height: 72px;
+        align-items: center;
+        width: 100%;
+    }
+    .title--logo--black, .nav--top{
+        margin-left: 117px;
+    }
+    .title--search{
+        margin: 0px 117px 0px auto;
+    }
+
+    .nav--top::-webkit-scrollbar {
+      display: none;
+    }  
+    .cart_Button_callModel{
+        display: none !important;
     }
     .card_pic{
         width: 300px;
         height: 200px;
     }
     main{
-        margin-left: 116px;
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
     #modal{
         display: block !important;
