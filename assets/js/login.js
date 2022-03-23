@@ -16,21 +16,18 @@ class App{
         Display.changeToLogin();
     }
 
-    static login(event){
+    static login(form){
+
         const inputs = form
-        const dataForm  = {}        
+        const user  = {}        
         for (let i = 0; i < inputs.length; i++){
             const {name, value} = inputs[i]
             if(name){
-                dataForm[name] = value
+                user[name] = value
             }
-            inputs[i].value = ''
         }
-        this.usuario = User.logarUsuario(dataForm)
+        this.usuario = Api.logarUsuario(user)
     }
-
 }
-
-export {App}
-
 Display.displayLogin();
+export {App}
