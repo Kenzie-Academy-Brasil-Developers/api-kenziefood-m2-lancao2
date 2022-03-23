@@ -40,6 +40,7 @@ const createCartCard = ({ id, nome, categoria, imagem, preco }) => {
               <button><img src="./src/icons/icon_trash.png" alt=""></button>
             </div>
           </div>`
+
   return card
 }
 
