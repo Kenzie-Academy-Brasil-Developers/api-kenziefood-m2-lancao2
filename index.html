@@ -7,6 +7,10 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+
   <!-- styles -->
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/home.css">
@@ -23,32 +27,58 @@
       </p>
       <input type="search" name="Pesquisa Nome" class="title--search" placeholder="Pesquisar por Produto">
     </div>
-    <nav class="nav--top">
-      <button class="button nav--button">
-        Todos
-      </button>
-      <button class="button nav--button">
-        <img src="./src/icons/Icon_bread.png" alt="Bread Icon"> Panificadora
-      </button>
-      <button class="button nav--button">
-        <img src="./src/icons/Icon_fruits.png" alt="Fruits Icon"> Frutas
-      </button>
-      <button class="button nav--button">
-        <img src="./src/icons/Icon_glass of wine.png" alt="Wine Icon">Bebidas
-      </button>
+    <nav>
+      <ul class="nav--top">
+        <li> <button class="button nav--button" id="todos">Todos</button></li>
+        <li>
+          <button class="button nav--button">
+            <img src="./src/icons/Icon_bread.png" alt="Bread Icon">Panificadora
+          </button>
+        </li>
+        <li>
+          <button class="button nav--button">
+            <img src="./src/icons/Icon_fruits.png" alt="Fruits Icon"> Frutas
+          </button>
+        </li>
+        <li>
+          <button class="button nav--button">
+            <img src="./src/icons/Icon_glass of wine.png" alt="Wine Icon">Bebidas
+          </button>
+        </li>
+      </ul>
     </nav>
   </header>
   <main>
-    <section>
-      
+    <section class="products-container">
+      <!-- <div class="card"> 
+        <div class="card_pic">
+          
+        </div>
+        <div class="card_description">
+          <h2>Panqueca de banana com aveia </h2>
+          <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito, se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+          <div class="card_description_category">
+            <span>Panificadora</span>
+            <span>Frutas</span>
+          </div>
+          <div class="card_description_footer">
+            <h4>R$ 20,00</h4>
+            <button>
+              <span> </span>
+            </button>
+          </div>
+        </div>
+      </div> -->
     </section>
+    <button class="title--cart title--cart--border"> <img src="./src/icons/icon_cart.png" alt=""> <p>Carrinho</p> </button>
     <aside>
-      <div class="title--cart"> <img src="./src/icons/icon_cart.png" alt=""> <p>Carrinho</p> </div>
-      <div class="container--empty">
+      
+      <div class="title--cart" for="modal--cart" href="container"> <img src="./src/icons/icon_cart.png" alt=""> <p>Carrinho</p> </div>
+      <div class="container--empty hidden">
           <img src="./src/img/img_cart_empty.png" alt="">
           <p>Por enquanto não temos produtos no carrinho</p>
       </div>
-      <div class="container hidden">
+      <div class="container" id="modal--cart">
         <div class="card--cart">
           <div class="card--image">
             <img src="/src/img/product1.png" alt="">
@@ -103,12 +133,12 @@
         </div>
       </div>
 
-      <div class="container--total container--total--grey hidden">
+      <div class="container--total container--total--grey">
         <p>Quantidade</p>
         <span>10</span>
       </div>
 
-      <div class="container--total hidden">
+      <div class="container--total">
         <p>Total</p>
         <span>R$ 85,00</span>
       </div>
@@ -116,6 +146,7 @@
   </main>
   <footer></footer>
 <!-- scripts -->
+  <script src="https://kit.fontawesome.com/6e9eea67d0.js" crossorigin="anonymous"></script>
   <script type ="module" src="main.js"></script>
 </body>
 </html>

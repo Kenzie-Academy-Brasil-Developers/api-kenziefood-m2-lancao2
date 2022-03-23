@@ -1,13 +1,8 @@
-import { KenzieFood } from "./src/utils/KenzieFood.js";
+import { ShowCase } from "./src/models/Showcase.js";
 
-(async function main () {
-  const products = await KenzieFood.getProducts()  
-      
+(async () => {
   
-  const input = document.querySelector('.title--search')
-  input.addEventListener('keyup', (event) => {
-    KenzieFood.filterProducts(event, products)
-  })
-  
-  console.log(products)
+  await ShowCase.showProducts()
+  console.log(ShowCase.products)
+
 })()
