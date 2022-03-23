@@ -8,9 +8,28 @@ export class ShowCase {
     static async showProducts () {
       const products = await KenzieFood.getProducts()
       ShowCase.products = products
-
       this.products.forEach(product => {
         ShowCase.container.innerHTML += createCard(product)
       })
     }
+
+    static erasecontainer(){
+      ShowCase.container.innerHTML = ""
+    }
+  
+    static showCategory(event){
+      const category = event.target.name
+      this.erasecontainer();
+      this.products.forEach(function(product){
+        if (product.categoria == category){
+          ShowCase.container.innerHTML += createCard(product)
+        }
+      })
+    }
+  
+    static showAll(){
+      this.erasecontainer();
+      this.showProducts();
+    }
+    
 }
