@@ -16,7 +16,7 @@ const createCard =  ({ id, nome, categoria, imagem, preco, descricao }) => {
         </div>
         <div class="card_description_footer">
           <h4>${convertToBRL(preco)}</h4>
-          <button data-id="${id}">
+          <button>
             <span> </span>
           </button>
         </div>
