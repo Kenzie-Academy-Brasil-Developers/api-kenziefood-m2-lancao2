@@ -317,29 +317,6 @@ aside{
     display:none;
 }
 
-
-@media (min-width: 426px){
-    .title--top{
-        flex-direction: row;
-        height: 72px;
-        align-items: center;
-        width: 100%;
-    }
-    .title--logo--black, .nav--top{
-        margin-left: 117px;
-    }
-    .title--search{
-        margin: 0px 117px 0px auto;
-    }
-
-    .nav--top::-webkit-scrollbar {
-      display: none;
-    }  
-    .cart_Button_callModel{
-        display: none !important;
-    }
-}
-
 /* PRODUCT CONTEINER */
 
 .products-container{
@@ -365,4 +342,53 @@ main button{
 .cart_Button::before{
     content: "\f217";
     font: normal normal normal 14px/1 FontAwesome !important;
+}
+
+@media (min-width: 426px){
+    .title--top{
+        flex-direction: row;
+        height: 72px;
+        align-items: center;
+        width: 100%;
+    }
+    .title--logo--black, .nav--top{
+        margin-left: 117px;
+    }
+    .title--search{
+        margin: 0px 117px 0px auto;
+    }
+
+    .nav--top::-webkit-scrollbar {
+      display: none;
+    }  
+    .cart_Button_callModel{
+        display: none !important;
+    }
+    .products-container{
+        column-count: 3;
+        display: block;
+        overflow-y: hidden;
+        max-width: fit-content;
+    }
+    .card_pic{
+        width: 300px;
+        height: 200px;
+    }
+    main{
+        margin-left: 116px;
+        display: flex;
+        flex-direction: row;
+    }
+    #modal{
+        display: block !important;
+        position: relative;
+        background: none;
+        max-width: fit-content;
+    }
+    .close-modal{
+        display: none !important;
+    }
+    .conteiner_aside{
+        position: relative;
+    }
 }
