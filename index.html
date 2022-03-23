@@ -70,78 +70,81 @@
         </div>
       </div> -->
     </section>
-    <aside>
-      <div class="title--cart"> <img src="./src/icons/icon_cart.png" alt=""> <p>Carrinho</p> </div>
-      <div class="container--empty">
-          <img src="./src/img/img_cart_empty.png" alt="">
-          <p>Por enquanto não temos produtos no carrinho</p>
-      </div>
-      <div class="container">
-        <div class="card">
-          <div class="card--image">
-            <img src="/src/img/product1.png" alt="">
+    <aside id="modal">
+      <div class="conteiner_aside">
+        <div class="title--cart"> <img src="./src/icons/icon_cart.png" alt=""> <p>Carrinho</p> </div>
+        <div class="container--empty hidden">
+            <img src="./src/img/img_cart_empty.png" alt="">
+            <p>Por enquanto não temos produtos no carrinho</p>
+        </div>
+        
+        <div class="container">
+          <div class="card--cart">
+            <div class="card--image">
+              <img src="/src/img/product1.png" alt="">
+            </div>
+            <div class="card--infos">
+              <p>Panqueca de banana</p>
+              <span>Panificadora</span>
+              <span class="infos--price">R$ 20,00</span>
+            </div>
+            <div class="card--remove">
+              <button><img src="./src/icons/icon_trash.png" alt=""></button>
+            </div>
           </div>
-          <div class="card--infos">
-            <p>Panqueca de banana</p>
-            <span>Panificadora</span>
-            <span class="infos--price">R$ 20,00</span>
+          <div class="card--cart">
+            <div class="card--image">
+              <img src="/src/img/product2.png" alt="">
+            </div>
+            <div class="card--infos">
+              <p>Panqueca de banana</p>
+              <span>Panificadora</span>
+              <span class="infos--price">R$ 20,00</span>
+            </div>
+            <div class="card--remove">
+              <button><img src="./src/icons/icon_trash.png" alt=""></button>
+            </div>
           </div>
-          <div class="card--remove">
-            <button><img src="./src/icons/icon_trash.png" alt=""></button>
+          <div class="card--cart">
+            <div class="card--image">
+              <img src="/src/img/product3.png" alt="">
+            </div>
+            <div class="card--infos">
+              <p>Panqueca de banana</p>
+              <span>Panificadora</span>
+              <span class="infos--price">R$ 20,00</span>
+            </div>
+            <div class="card--remove">
+              <button><img src="./src/icons/icon_trash.png" alt=""></button>
+            </div>
+          </div>
+          <div class="card--cart">
+            <div class="card--image">
+              <img src="/src/img/product4.png" alt="">
+            </div>
+            <div class="card--infos">
+              <p>Panqueca de banana</p>
+              <span>Panificadora</span>
+              <span class="infos--price">R$ 20,00</span>
+            </div>
+            <div class="card--remove">
+              <button><img src="./src/icons/icon_trash.png" alt=""></button>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card--image">
-            <img src="/src/img/product2.png" alt="">
-          </div>
-          <div class="card--infos">
-            <p>Panqueca de banana</p>
-            <span>Panificadora</span>
-            <span class="infos--price">R$ 20,00</span>
-          </div>
-          <div class="card--remove">
-            <button><img src="./src/icons/icon_trash.png" alt=""></button>
-          </div>
+  
+        <div class="container--total ">
+          <p>Quantidade</p>
+          <span>10</span>
         </div>
-        <div class="card">
-          <div class="card--image">
-            <img src="/src/img/product3.png" alt="">
-          </div>
-          <div class="card--infos">
-            <p>Panqueca de banana</p>
-            <span>Panificadora</span>
-            <span class="infos--price">R$ 20,00</span>
-          </div>
-          <div class="card--remove">
-            <button><img src="./src/icons/icon_trash.png" alt=""></button>
-          </div>
+  
+        <div class="container--total value_total">
+          <p>Total</p>
+          <span>R$ 85,00</span>
         </div>
-        <div class="card">
-          <div class="card--image">
-            <img src="/src/img/product4.png" alt="">
-          </div>
-          <div class="card--infos">
-            <p>Panqueca de banana</p>
-            <span>Panificadora</span>
-            <span class="infos--price">R$ 20,00</span>
-          </div>
-          <div class="card--remove">
-            <button><img src="./src/icons/icon_trash.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="container--total container--total--grey hidden">
-        <p>Quantidade</p>
-        <span>10</span>
-      </div>
-
-      <div class="container--total">
-        <p>Total</p>
-        <span>R$ 85,00</span>
       </div>
     </aside>
-    <button class="cart_Button">  Carrinho</button>
+    <button class="cart_Button_callModel" id="modalButton">  Carrinho</button>
   </main>
   <footer></footer>
 <!-- scripts -->
