@@ -16,4 +16,16 @@ export class ShowCase {
         ShowCase.container.innerHTML += createCard(product)
       })
     }
+
+    static async filterByCategory(category, products){
+      if (!category) {
+        return ShowCase.showProducts(products)
+      }
+
+      const filteredProducts = products.filter(product => {
+        return product.categoria === category
+      })
+      ShowCase.showProducts(filteredProducts)
+    }
+
 }

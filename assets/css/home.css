@@ -173,10 +173,26 @@ main{
 
 /* ASIDE */
 aside{
+    position: fixed;
+    z-index: 2;
+    background-color: #00000088;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    transition: 350ms;
+    display: none;
+
+}
+.conteiner_aside{
     font-family: 'Poppins', sans-serif;
     width:320px;
     height: 583px;
-    margin-right: 115px;  
+    margin-right: 115px;
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    left: 13%;
+    
 }
 
 .title--cart{
@@ -219,23 +235,20 @@ aside{
     line-height: 24px;
 }
 
+
 .container{
     overflow-y: scroll;
-    margin-left: 9.5px;
-    height: 330px;
+    height: 320px;
+    background-color: #E4F7EF;
 }
 
-.card{
+
+.card--cart{
     display:flex;
+    margin-left: 10px;
     margin-top: 23px;
     margin-bottom: 20px;
 }
-
-    .card--cart{
-        display:flex;
-        margin-top: 23px;
-        margin-bottom: 20px;
-    }
 
 .card--infos{
     margin-left: 12px;
@@ -285,10 +298,11 @@ aside{
     align-items: center;
     font-size: 12px;
     font-weight: 600;
-}
-
-.container--total--grey{
     background-color: #F8F9FA;
+    border: none;
+}
+.value_total{
+    border-radius: 0px 0px 8px 8px;
 }
 
 .container--total p{
@@ -304,7 +318,7 @@ aside{
 }
 
 
-@media (min-width: 1024px){
+@media (min-width: 426px){
     .title--top{
         flex-direction: row;
         height: 72px;
@@ -321,5 +335,34 @@ aside{
     .nav--top::-webkit-scrollbar {
       display: none;
     }  
+    .cart_Button_callModel{
+        display: none !important;
+    }
 }
 
+/* PRODUCT CONTEINER */
+
+.products-container{
+    display: flex;
+    overflow-y: scroll;
+    column-gap: 20px;
+    margin-left: 18px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+main button{
+    width: 100vw;
+    height: 60px;
+    border: none;
+    background-color: #FF2253;
+    color: #E4F7EF;
+    font-weight: 700;
+    font-size: 17.1px;
+}
+
+.cart_Button::before{
+    content: "\f217";
+    font: normal normal normal 14px/1 FontAwesome !important;
+}
