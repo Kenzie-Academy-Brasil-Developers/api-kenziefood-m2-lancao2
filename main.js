@@ -48,8 +48,5 @@ aside.addEventListener("click", closeModal)
 
 const categoryButtonsNav = document.querySelector('.nav--top')
 categoryButtonsNav.addEventListener('click', filterProducts)
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/development-matheus
