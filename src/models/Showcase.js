@@ -89,6 +89,4 @@ export class ShowCase {
       amount.innerText = ShowCase.cartProducts.length
       price.innerText -= priceProduct
     }
-
-
 }
