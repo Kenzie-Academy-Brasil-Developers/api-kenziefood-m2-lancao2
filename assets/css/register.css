@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend Deca', sans-serif;
+  background: #FF2253;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+} 
+
+.form-container__header p {
+  color: #212529;
+  font-weight: 700;
+  font-size: 21.6949px;
+  line-height: 33px;
+}
+
+.form-title-span {
+  font-weight: 700;
+  font-size: 16.2712px;
+  line-height: 24px;
+  color: #FF2253;
+}
+
+.form-container__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0 5px 0;  
+  height: 30px;
+  color: #000000;
+  border-radius: 10px 10px 0 0;
+}
+
+.register-title {
+  margin: 10px auto;
+  font-size: 23px;
+}
+
+.form-container__body {
+  padding: 0 15px 15px 15px;  
+}
+
+.form-container h1{
+  font-size: 25px;
+  font-weight: 700;
+  border-bottom: 1px solid #CED4DA;
+}
+
+.form {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form input { 
+  width: 100%;
+  height: 40px;
+  outline: 0;
+  font-size: 14px;
+  max-width: 300px;
+  padding: 5px 10px;
+  border: none;
+  margin: 2px auto;
+  border-bottom: 1px solid #CED4DA;
+}
+
+.form input[type=submit]{
+  margin-top: 40px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 18px;
+  background: rgba(255, 34, 83, .7);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 20px;
+}
