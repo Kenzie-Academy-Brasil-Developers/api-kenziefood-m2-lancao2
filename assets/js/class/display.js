@@ -1,5 +1,5 @@
 import {App} from "./../login.js"
-class Display{
+class Display {
     static displayLogin(){
         let h2 = document.createElement("h2")
         h2.innerText = "Login"
