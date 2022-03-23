@@ -3,10 +3,12 @@
 .title--top{
     width: 100%;
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
+    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
 }
 
-.title--logo--black, .nav--top{
+.title--logo--black {
     margin-left: 18px;
 }
 
@@ -29,8 +31,9 @@
 }
 
 .title--search{
-    width: 342px;
-    padding: 15px 18px 15px 16px;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px ;
     border: 1.5px solid #E9ECEF;
     box-sizing: border-box;
     border-radius: 12px;
@@ -45,7 +48,12 @@
 
 .nav--top {
   display: flex;
+  align-items: center;
   overflow-x: scroll;
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  margin: 30px auto;
 }
 
 .nav--top::-webkit-scrollbar {
@@ -60,19 +68,40 @@
 }
 
 .nav--button{
-    background: #FFF7F4;
-    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    background: #F3EEF5;
     padding: 15px 20px;
-    border: 1.5px solid #FFF7F4;
+    margin-right: 22px;
+    border: 1.5px solid #F3EEF5;
+    border-radius: 32px;
     box-sizing: border-box;
-    border-radius: 30px;
     color: #212529;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    margin-right: 22px;
 }
+
+.nav--button.panificadora {
+  background-color: #FFF7F4;
+  border: 1.5px solid #FFF7F4;
+}
+
+.nav--button.frutas {
+  background-color: #FFF1F4;
+  border: 1.5px solid #FFF1F4;
+}
+
+.nav--button.bebidas {
+  background-color: #F3EEF5;
+  border: 1.5px solid #F3EEF5;
+}
+
 .nav--top:last-child{
     margin-right: 15px;
 }
@@ -81,12 +110,13 @@
     background: #FF2253;
     border-color: #FF2253;
     color: #F8F9FA;
+    cursor: pointer;
 }
 
-main{
-    display: flex;
-    justify-content: space-between;
+.nav--button img {
+  margin-right: 7px;
 }
+
 /* ============================= FIM NAV ==================================*/
 
 /*============================= CARD SECTION ==============================*/
@@ -273,11 +303,6 @@ aside{
     border-radius: 5px;
 }
 
-#todos{
-    height: 76px;
-}
-
-
 .card--cart{
     display:flex;
     margin-left: 10px;
@@ -355,19 +380,22 @@ aside{
 
 /* PRODUCT CONTEINER */
 
-.products-container{
-    display: flex;
-    overflow-x: scroll;
-    margin-left: 18px;
-    column-gap: 10px;
-}
 main{
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
+
+.products-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  min-height: 400px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 main #modalButton{
-    width: 100vw;
+    width: 100%;
     height: 60px;
     border: none;
     background-color: #FF2253;
@@ -377,7 +405,6 @@ main #modalButton{
     display: block;
     position: fixed;
     bottom: 0;
-    border-radius: 8px 8px 0px 0px;
     
 }
 
@@ -396,7 +423,8 @@ main #modalButton{
     border: none;
     background-color: #FF2253;
     color: #E9ECEF;
-    width: 15vw;
+    width: 100%;
+    max-width: 100px;
     height: 48px;
     border-radius: 12px;
     font-size: 2vh;
@@ -405,16 +433,11 @@ main #modalButton{
 }
 .title-input-login{
     display: flex;
-    align-items: center;
     flex-wrap: nowrap;
+    align-items: center;
     justify-content: center;
+    padding: 15px 20px;
 
-}
-
-@media (min-width: 604px){
-    #todos{
-        height: 57px;
-    }
 }
 
 @media (min-width: 769px){
@@ -424,9 +447,14 @@ main #modalButton{
         height: 72px;
         align-items: center;
         width: 100%;
+        padding: 0 80px 0 150px;
     }
-    .title--logo--black, .nav--top{
-        margin-left: 117px;
+    .nav--top {
+      margin-left: 150px;
+    }
+
+    .title--logo--black {
+      padding-left: 5px;
     }
 
     .nav--top::-webkit-scrollbar {
@@ -435,6 +463,7 @@ main #modalButton{
     .cart_Button_callModel{
         display: none !important;
     }
+
     .products-container{
         display: flex;
         flex-wrap: wrap;
@@ -443,6 +472,9 @@ main #modalButton{
         justify-content: center;
         margin-left: 0px;
         column-gap: 3px;
+        width: 100%;
+        
+      
     }
     
     .title--top{
@@ -451,10 +483,7 @@ main #modalButton{
         align-items: center;
         width: 100%;
     }
-    .title--logo--black, .nav--top{
-        margin-left: 117px;
-    }
-
+  
     .nav--top::-webkit-scrollbar {
       display: none;
     }  
@@ -462,7 +491,8 @@ main #modalButton{
         display: none !important;
     }
     .card_pic{
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         height: 200px;
     }
     .card_pic img:hover{
@@ -474,7 +504,8 @@ main #modalButton{
     main{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 0 88px;
     }
     #modal{
         display: block !important;

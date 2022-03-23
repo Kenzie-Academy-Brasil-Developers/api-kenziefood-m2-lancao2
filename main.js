@@ -62,3 +62,6 @@ categoryButtonsNav.addEventListener('click', filterProducts)
 
 const showCaseContainer = ShowCase.container
 showCaseContainer.addEventListener('click', addToCart)
+
+const formLogin = document.getElementById('form-login')
+console.log(formLogin)
