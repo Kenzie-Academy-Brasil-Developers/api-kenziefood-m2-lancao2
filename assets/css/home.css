@@ -1,7 +1,6 @@
 /*==================================== NAV ==============================*/
 
 .title--top{
-    margin-top:  21px ;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -37,7 +36,6 @@
     border-radius: 12px;
     background: #E9ECEF;
     align-self: center;
-    margin: 36px 15px 35px 18px;
 }
 
 .title--search:focus{
@@ -136,13 +134,15 @@ main{
 }
 
 .card_description_footer button{
-  width: 39px;
+  width: 100px;
   height: 38px;
   border: none;
-  background-color: #E4F7EF;
-  border-radius: 50%;
+  border-radius: 50px;
   cursor: pointer;
   text-align: center;
+  margin-right: 20px;
+  background-color: #0CA678;
+  color: #E4F7EF;
 }
 
 .card_description_footer button:after{
@@ -153,10 +153,7 @@ main{
   font: normal normal normal 14px/1 FontAwesome !important;
 }
 
-.card_description_footer button:hover{
-  background-color: #0CA678;
-  color: #E4F7EF;;
-}
+
 
 .card_description_footer h4{
   font-weight: 500;
@@ -277,7 +274,7 @@ aside{
 }
 
 #todos{
-    height: 57px;
+    height: 76px;
 }
 
 
@@ -362,7 +359,7 @@ aside{
     display: flex;
     overflow-x: scroll;
     margin-left: 18px;
-    justify-content: space-around;
+    column-gap: 10px;
 }
 main{
     display: flex;
@@ -388,9 +385,41 @@ main #modalButton{
     content: "\f217";
     font: normal normal normal 14px/1 FontAwesome !important;
 }
+.card--image img{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    border: 2px solid #E9ECEF;
+}
+
+.button_login{
+    border: none;
+    background-color: #FF2253;
+    color: #E9ECEF;
+    width: 15vw;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 2vh;
+    font-weight: bold;
+    margin-left: 2px;
+}
+.title-input-login{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+@media (min-width: 604px){
+    #todos{
+        height: 57px;
+    }
+}
 
 @media (min-width: 769px){
     .title--top{
+        justify-content: space-between;
         flex-direction: row;
         height: 72px;
         align-items: center;
@@ -398,9 +427,6 @@ main #modalButton{
     }
     .title--logo--black, .nav--top{
         margin-left: 117px;
-    }
-    .title--search{
-        margin: 0px 117px 0px auto;
     }
 
     .nav--top::-webkit-scrollbar {
@@ -413,6 +439,10 @@ main #modalButton{
         display: flex;
         flex-wrap: wrap;
         overflow-x: revert; 
+        column-gap: 0px;
+        justify-content: center;
+        margin-left: 0px;
+        column-gap: 3px;
     }
     
     .title--top{
@@ -423,9 +453,6 @@ main #modalButton{
     }
     .title--logo--black, .nav--top{
         margin-left: 117px;
-    }
-    .title--search{
-        margin: 0px 117px 0px auto;
     }
 
     .nav--top::-webkit-scrollbar {
@@ -438,6 +465,12 @@ main #modalButton{
         width: 300px;
         height: 200px;
     }
+    .card_pic img:hover{
+        border: 3px solid #FF2253;
+        border-radius: 8px;
+
+
+    }
     main{
         display: flex;
         flex-direction: row;
@@ -447,12 +480,42 @@ main #modalButton{
         display: block !important;
         position: relative;
         background: none;
-        max-width: fit-content;
+        width: 320px !important;
+        margin-right: 1.5vw;
     }
     .close-modal{
         display: none !important;
     }
     .conteiner_aside{
         position: relative;
+        width: 320px;
+    }
+    
+    .card_description_footer button:hover{
+        background-color: #0CA678;
+        color: #E4F7EF;;
+    }
+    .card_description_footer button{
+        width: 39px;
+        height: 38px;
+        border: none;
+        background-color: #E9ECEF;
+        color: #212529;
+    }
+    
+    .card--remove img{
+        cursor: pointer;
+        width: 20px;
+
+    }
+    .card--remove img:hover{
+        border: 5px solid #FF2253;
+        border-radius: 50%;
+        background-color: #FF2253;
+    }
+    .title-input-login{
+        margin-right: 10px;
+        column-gap: 1.5vw;
     }
 }
+
