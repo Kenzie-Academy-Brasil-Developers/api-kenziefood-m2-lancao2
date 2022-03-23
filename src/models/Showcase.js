@@ -15,7 +15,6 @@ export class ShowCase {
       ShowCase.products = products
       
       products.forEach(product => {
-        console.log(product)
         ShowCase.container.innerHTML += createCard(product)
       })
       
