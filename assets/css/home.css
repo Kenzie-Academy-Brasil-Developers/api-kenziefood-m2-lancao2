@@ -361,6 +361,9 @@ aside{
     .cart_Button_callModel{
         display: none !important;
     }
+    .products-container{
+        flex-wrap: wrap;
+    }
 }
 
 /* PRODUCT CONTEINER */
