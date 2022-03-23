@@ -28,6 +28,15 @@ const closeModal = e => {
   })
 }
   
+const filterProducts = async (e) => {
+  const clickedElement = e.target
+  
+  if (clickedElement.tagName == 'BUTTON') {
+    const products = await KenzieFood.getProducts()
+    ShowCase.filterByCategory(clickedElement.name, products)
+  }
+}
+
 const input = document.querySelector('.title--search')
 input.addEventListener('keyup', KenzieFood.filterProducts)
 
@@ -36,3 +45,6 @@ buttonOpenCard.addEventListener("click", openModal)
 
 const aside = document.querySelector("aside")
 aside.addEventListener("click", closeModal)
+
+const categoryButtonsNav = document.querySelector('.nav--top')
+categoryButtonsNav.addEventListener('click', filterProducts)
