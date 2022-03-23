@@ -29,7 +29,7 @@ const closeModal = e => {
   })
 }
   
-const filterProducts = async (e) => {
+const filterProducts = async e => {
   const clickedElement = e.target
   
   if (clickedElement.tagName == 'BUTTON') {
