@@ -1,5 +1,4 @@
 import { createCard } from "../utils/functions.js"
-import { KenzieFood } from "../utils/KenzieFood.js"
 
 export class ShowCase {
     static container = document.querySelector('.products-container')
