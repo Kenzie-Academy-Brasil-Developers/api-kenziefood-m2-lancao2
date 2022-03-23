@@ -1,3 +1,5 @@
+import {Url} from "./handleUrl.js"
+
 class Api {
 
     static url = "https://kenzie-food-api.herokuapp.com/auth/"
@@ -22,6 +24,7 @@ class Api {
         })
         const responseData = await response.json()
         localStorage.setItem("user_session", responseData)
+        Url.goHome()
     }
 }
 
