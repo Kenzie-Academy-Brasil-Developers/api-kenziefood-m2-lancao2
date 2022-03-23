@@ -49,8 +49,31 @@ export class ShowCase {
       })
       
       ShowCase.cartProducts.push(product)
-  
-      cart.innerHTML += createCartCard(product)      
+      cart.innerHTML += createCartCard(product)
+      
+      const buttons = document.querySelectorAll(`.card--remove button`)
+      for(let i = 0; i < buttons.length; i++){
+        buttons[i].addEventListener('click', ShowCase.removeCart)
+      }
     }
+
+    static async removeCart(event){
+        const button = event.target;
+        
+        const div = button.closest('.card--cart');
+
+        
+
+        const product = ShowCase.cartProducts.find((el) => {
+          return el.id == div.dataset.id
+        })
+        
+        const index = ShowCase.cartProducts.indexOf(product);
+
+        ShowCase.cartProducts.splice(index, 1);
+
+        div.remove();
+    }
+
 
 }
