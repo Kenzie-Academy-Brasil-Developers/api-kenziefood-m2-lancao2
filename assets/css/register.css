@@ -88,3 +88,18 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 20px;
 }
+
+.register-span a {
+  text-decoration: none;
+  color: #FF2253;
+}
+
+.register-section p {
+  margin: 10px auto;
+}
+
+.register-section p:last-child {
+  font-weight: 300;
+}
+
+
