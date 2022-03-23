@@ -77,7 +77,10 @@ categoryButtonsNav.addEventListener('click', filterProducts)
 
 const showCaseContainer = ShowCase.container
 showCaseContainer.addEventListener('click', addToCart)
+<<<<<<< HEAD
 
 const divProducts = document.querySelector('.container');
 divProducts.addEventListener('click', removeProduct);
 
+=======
+>>>>>>> development
