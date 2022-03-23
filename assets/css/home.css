@@ -42,6 +42,9 @@
     background-color: #F8F9FA;
     border-color: #212529;;
 }
+nav{
+    margin: 25px 10px 25px 0px;
+}
 
 .nav--top {
   display: flex;
@@ -408,7 +411,7 @@ main #modalButton{
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-
+    margin-top: 25px;
 }
 
 @media (min-width: 604px){
@@ -427,6 +430,7 @@ main #modalButton{
     }
     .title--logo--black, .nav--top{
         margin-left: 117px;
+        margin: 50px 10px 50px 0px;
     }
 
     .nav--top::-webkit-scrollbar {
@@ -516,6 +520,7 @@ main #modalButton{
     .title-input-login{
         margin-right: 10px;
         column-gap: 1.5vw;
+        
     }
 }
 
