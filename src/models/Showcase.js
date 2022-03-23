@@ -1,4 +1,4 @@
-import { createCard } from "../utils/functions.js"
+import { createCard, createCartCard } from "../utils/functions.js"
 
 export class ShowCase {
     static container = document.querySelector('.products-container')

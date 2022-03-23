@@ -26,4 +26,21 @@ const createCard =  ({ id, nome, categoria, imagem, preco, descricao }) => {
     return cardTemplade
 }
 
-export { createCard }
+const createCartCard = ({ id, nome, categoria, imagem, preco }) => {
+  const card = `
+          <div class="card--cart" data-id="${id}">
+            <div class="card--image">
+              <img src="${imagem}" alt="">
+            </div>
+            <div class="card--infos">
+              <p>${nome}</p>
+              <span>${categoria}</span>
+              <span class="infos--price">${convertToBRL(preco)}</span>
+            </div>
+            <div class="card--remove">
+              <button><img src="./src/icons/icon_trash.png" alt=""></button>
+            </div>
+          </div>`
+}
+
+export { createCard, createCartCard }
