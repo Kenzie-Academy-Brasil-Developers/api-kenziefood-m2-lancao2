@@ -16,13 +16,12 @@ const createCard =  ({ id, nome, categoria, imagem, preco, descricao }) => {
         </div>
         <div class="card_description_footer">
           <h4>${convertToBRL(preco)}</h4>
-          <button>
+          <button data-id="${id}">
             <span> </span>
           </button>
         </div>
       </div>
     </div> `
-
     return cardTemplade
 }
 
@@ -41,6 +40,7 @@ const createCartCard = ({ id, nome, categoria, imagem, preco }) => {
               <button><img src="./src/icons/icon_trash.png" alt=""></button>
             </div>
           </div>`
+  return card
 }
 
 export { createCard, createCartCard }

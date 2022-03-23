@@ -1,4 +1,5 @@
 const section = document.querySelector("section")
+import { Cart } from "./src/models/Cart.js";
 import { ShowCase } from "./src/models/Showcase.js";
 import { KenzieFood } from "./src/utils/KenzieFood.js";
 
@@ -28,12 +29,22 @@ const closeModal = e => {
   })
 }
   
-const filterProducts = async (e) => {
+const filterProducts = async e => {
   const clickedElement = e.target
   
   if (clickedElement.tagName == 'BUTTON') {
     const products = await KenzieFood.getProducts()
     ShowCase.filterByCategory(clickedElement.name, products)
+  }
+}
+
+const addToCart = e => {
+  const clickedElement = e.target
+  const productId = clickedElement.dataset.id
+  
+  if(productId) {
+    const productToAdd = ShowCase.products.find(({ id }) => +id === +productId)
+     Cart.addCart(productToAdd)
   }
 }
 
@@ -48,3 +59,13 @@ aside.addEventListener("click", closeModal)
 
 const categoryButtonsNav = document.querySelector('.nav--top')
 categoryButtonsNav.addEventListener('click', filterProducts)
+
+const showCaseContainer = ShowCase.container
+showCaseContainer.addEventListener('click', addToCart)
+
+const cartContainer = document.querySelector('.container')
+cartContainer.addEventListener('click', e => {
+
+})
+
+
