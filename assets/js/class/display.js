@@ -1,4 +1,5 @@
 import {App} from "./../login.js"
+import { Url } from "./handleUrl.js"
 class Display {
     static displayLogin(){
         let h2 = document.createElement("h2")
@@ -63,6 +64,7 @@ class Display {
         document.querySelector('main').appendChild(div)
         linkRegister.addEventListener("click", ()=> this.changeToRegister())
         button.addEventListener("click", ()=> App.login(form))
+        linkSkipLogin.addEventListener("click", ()=> Url.goHome())
     }
 
     static displayRegister(){
@@ -132,6 +134,7 @@ class Display {
         document.querySelector('main').appendChild(div)
         textLogin.addEventListener("click", ()=> this.changeToLogin())
         button.addEventListener("click", ()=> App.register(form))
+        linkSkipLogin.addEventListener("click", ()=> Url.goHome())
     }
 
     static resetMain(){
