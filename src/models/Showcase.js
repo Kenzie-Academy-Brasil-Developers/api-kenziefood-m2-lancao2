@@ -49,20 +49,21 @@ export class ShowCase {
       })
       
       ShowCase.cartProducts.push(product)
+      
       cart.innerHTML += createCartCard(product)
       
       const buttons = document.querySelectorAll(`.card--remove button`)
       for(let i = 0; i < buttons.length; i++){
         buttons[i].addEventListener('click', ShowCase.removeCart)
       }
+      console.log(product)
+      ShowCase.sumProducts(product.preco)
     }
 
     static async removeCart(event){
         const button = event.target;
         
-        const div = button.closest('.card--cart');
-
-        
+        const div = button.closest('.card--cart');        
 
         const product = ShowCase.cartProducts.find((el) => {
           return el.id == div.dataset.id
@@ -72,7 +73,24 @@ export class ShowCase {
 
         ShowCase.cartProducts.splice(index, 1);
 
+        ShowCase.subProducts(product.preco) 
         div.remove();
+    }
+
+    static async sumProducts(priceProduct){
+      const amount = document.querySelector('.container--total span')
+      const price = document.querySelector('.value_total span')
+
+      amount.innerText = ShowCase.cartProducts.length
+      price.innerText += priceProduct
+    }
+
+    static subProducts(priceProduct){
+      const amount = document.querySelector('.container--total span')
+      const price = document.querySelector('.value_total span')
+      
+      amount.innerText = ShowCase.cartProducts.length
+      price.innerText -= priceProduct
     }
 
 
