@@ -10,6 +10,8 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
 })()
 /* ============== End main function ==============*/
 
+Cart.createProductsInStorage()
+
 const openModal = () => {
   const modal = document.getElementById("modal")
   modal.style.display = "block"
@@ -45,8 +47,21 @@ const addToCart = e => {
   if(productId) {
     const productToAdd = ShowCase.products.find(({ id }) => +id === +productId)
      Cart.addCart(productToAdd)
+
+    //  const buttons = document.querySelectorAll(`.card--remove button`)
+    //  Array.from(buttons).forEach(button =>
+    //     button.addEventListener('click', Cart.removeCart))
   }
 }
+
+const removeProduct = (event) => {
+  const button = event.target;
+  if(button.tagName === 'BUTTON' || button.tagName === 'IMG'){
+     Cart.removeCart(event)
+  }
+  console.log(button)
+}
+
 
 const input = document.querySelector('.title--search')
 input.addEventListener('keyup', KenzieFood.filterProducts)
@@ -63,5 +78,6 @@ categoryButtonsNav.addEventListener('click', filterProducts)
 const showCaseContainer = ShowCase.container
 showCaseContainer.addEventListener('click', addToCart)
 
-
+const divProducts = document.querySelector('.container');
+divProducts.addEventListener('click', removeProduct);
 
