@@ -49,6 +49,7 @@ class Display{
         div.appendChild(linkSkipLogin)
         document.querySelector("main").appendChild(div)
         linkRegister.addEventListener("click", ()=> this.changeToRegister())
+        button.addEventListener("click", ()=> App.login(form))
     }
 
     static displayRegister(){
