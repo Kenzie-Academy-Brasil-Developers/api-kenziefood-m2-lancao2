@@ -1,6 +1,8 @@
 import { ShowCase } from "../models/Showcase.js"
 
 export const KenzieFood = class {
+  static cartProducts = [];
+
   static async getProducts () {
     return (await fetch('https://kenzie-food-api.herokuapp.com/products')).json()
   }
