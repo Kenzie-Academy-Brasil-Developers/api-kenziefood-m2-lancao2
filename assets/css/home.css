@@ -173,6 +173,7 @@ main{
 
 /* ASIDE */
 aside{
+    animation: modal_bg 0.5s;
     position: fixed;
     z-index: 2;
     background-color: #00000088;
@@ -184,16 +185,26 @@ aside{
 
 }
 .conteiner_aside{
+    animation: pop-up-modal 0.5s;
     font-family: 'Poppins', sans-serif;
-    width:320px;
-    height: 583px;
+    width:100%;
+    height: 100%;
     margin-right: 115px;
     position: fixed;
     z-index: 2;
     top: 10%;
-    left: 13%;
     
 }
+@keyframes pop-up-modal {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 10%;
+    }
+    
+}
+
 
 .title--cart{
     display: flex;
@@ -202,6 +213,17 @@ aside{
     height: 56px;
     border-radius: 8px 8px 0 0;
     color: white; 
+    justify-content: space-between;
+}
+.title--cart--container{
+    display: flex;
+
+}
+.close-modal{
+    margin-left: 0 !important;
+    margin-right: 30px;
+    content: f00d;
+    font: normal normal normal 14px/1 FontAwesome !important;
 }
 
 .title--cart img{
@@ -248,6 +270,7 @@ aside{
     margin-left: 10px;
     margin-top: 23px;
     margin-bottom: 20px;
+    justify-content: space-around;
 }
 
 .card--infos{
@@ -291,7 +314,7 @@ aside{
 }
 
 .container--total{
-    width: 319px;
+    width: 100%;
     height: 58px;
     display:flex;
     justify-content: space-between;
@@ -338,6 +361,9 @@ aside{
     .cart_Button_callModel{
         display: none !important;
     }
+    .products-container{
+        flex-wrap: wrap;
+    }
 }
 
 /* PRODUCT CONTEINER */
@@ -351,8 +377,9 @@ aside{
 main{
     display: flex;
     flex-direction: column;
+    height: 457px;
 }
-main button{
+main #modalButton{
     width: 100vw;
     height: 60px;
     border: none;
@@ -360,6 +387,11 @@ main button{
     color: #E4F7EF;
     font-weight: 700;
     font-size: 17.1px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    border-radius: 8px 8px 0px 0px;
+    
 }
 
 .cart_Button::before{
