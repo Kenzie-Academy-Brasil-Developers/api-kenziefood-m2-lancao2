@@ -1,4 +1,8 @@
-function createCard ({ id, nome, categoria, imagem, preco, descricao }) {
+const convertToBRL = value => 
+  value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
+
+const createCard =  ({ id, nome, categoria, imagem, preco, descricao }) => {
   const cardTemplade = `
     <div class="card" data-id="${id}">
       <div class="card_pic">
@@ -11,7 +15,7 @@ function createCard ({ id, nome, categoria, imagem, preco, descricao }) {
           <span>${categoria}</span>
         </div>
         <div class="card_description_footer">
-          <h4>${preco}</h4>
+          <h4>${convertToBRL(preco)}</h4>
           <button>
             <span> </span>
           </button>
