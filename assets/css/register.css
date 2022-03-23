@@ -98,8 +98,10 @@ body {
   margin: 10px auto;
 }
 
-.register-section p:last-child {
+.register-section p:last-child a{
   font-weight: 300;
+  color: #000000;
+  text-decoration: none;
 }
 
 
