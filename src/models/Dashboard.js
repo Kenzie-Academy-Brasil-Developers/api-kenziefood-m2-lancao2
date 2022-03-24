@@ -11,6 +11,17 @@ export class Dashboard {
     Dashboard.products.forEach(product => {
       Dashboard.container.innerHTML += createDashboardCard(product)
     })
+    // abrir modal deletar produto 
+    const modalDelet = document.querySelector(".modalDelet")
+    const actionDeletopen = document.querySelector(".action_delet")
+    actionDeletopen.addEventListener("click" , (event) =>{
+      modalDelet.style.display = "flex"
+    
+    })
+    const modalDeletClose = document.querySelector(".close_delet")
+    modalDeletClose.addEventListener("click" , () =>{
+      modalDelet.style.display = "none"
+    })
   }
 
   static async addProduct (e) {

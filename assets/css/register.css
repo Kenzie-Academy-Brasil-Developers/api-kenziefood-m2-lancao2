@@ -112,4 +112,14 @@ body {
   text-decoration: none;
 }
 
-
+.error--div{
+  padding: 10px;
+  position: absolute;
+  top: 85%;
+  margin: 0 auto;
+  background: #CED4DA;
+  min-height: fit-content;
+  min-width: fit-content;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
