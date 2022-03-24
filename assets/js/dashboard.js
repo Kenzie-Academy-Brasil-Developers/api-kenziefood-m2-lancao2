@@ -17,7 +17,19 @@ const logout = () => {
   location.assign('../../src/pages/login.html')
 }
 
-const logoutButton = document.querySelector('.pop-up_logout_conteiner')
-  .querySelector('button')
 
-logoutButton.addEventListener('click', logout)
+
+let click = 0 
+const popup_logout = document.querySelector(".pop-up_logout")
+const userButton = document.querySelector('.user')
+userButton.addEventListener("click" , () =>{
+  if(click === 0){
+    popup_logout.style.display = "block"
+  click = 1
+  }
+  else if(click === 1){
+    popup_logout.style.display = "none"
+    click = 0
+  }
+})
+
