@@ -1,6 +1,7 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+/*Header Fim*/
 .title--top{
     margin-top: 20px;
     width: 100%;
@@ -134,6 +135,118 @@ nav ul{
     border-radius: 50px;
 
 }
+/*Header Fim*/
+main{
+    overflow-y: scroll;
+}
+.tabel{
+    font-family: 'Poppins', sans-serif;
+    width: 1380px;
+    height: 90vh;
+    margin-left: 20px;
+
+}
+.tabel_title ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tabel_title li{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15.5px;
+    color: #868E96;
+}
+.tabel_title_action{
+    margin-right: 45px;
+}
+
+.tabel_list{
+    display: flex;
+    flex-direction: column;
+}
+.tabel_list_iten{
+    margin-top: 20px;
+    margin-bottom: 20pxpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E9ECEF;
+    border-radius: 12px;
+    height: 78px;
+    background-color: #FFFFFF;
+}
+.tabel_list_iten_product{
+    display: flex;
+}
+.tabel_list_iten_pic{
+
+}
+.tabel_list_iten_pic img{
+    margin-left: 6px;
+    height: 58px;
+    border-radius: 50%;
+}
+.tabel_list_iten_name{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 17px;
+    color: #212529;
+    padding-left: 15px;
+}
+.tabel_list_iten_category{
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    color: #868E96;
+    font-weight: 400;
+    font-size: 15.5px;
+    height: 21px;
+    text-align: center;
+}
+.tabel_list_iten_category p{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tabel_list_iten_description{
+    white-space: nowrap;
+    overflow-y: hidden;
+    width: 440px;
+    font-weight: 400;
+    font-size: 15.5px;
+    color: #868E96;
+}
+.tabel_list_iten_action{
+    margin-right: 31.5px;
+}
+.tabel_list_iten_action button{
+    border: none;
+    background-color: transparent;
+}
+
+.action_edit::after{
+        content: "\f044";
+        font-family: 'Font Awesome 5 Free';
+        line-height: 14px;
+        font: normal normal normal 25px/1 FontAwesome !important;
+        color: #757677;
+
+}
+
+.action_delet::after{
+    content: "\f2ed";
+    font-family: 'Font Awesome 5 Free';
+    line-height: 14px;
+    font: normal normal normal 22.5px/1 FontAwesome !important;
+    color: #757677;
+
+}
+
+
 
 
 @media (min-width: 575px){
@@ -144,6 +257,26 @@ nav ul{
     }
     #todos{
         height: 60px;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        overflow: unset!important;
+    }
+    .tabel{
+        width: 90%;
+        overflow: unset!important;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .btnAddNew{
+        width: 217px !important;
+        height: 48px !important ;
+        font-size: 15px;
+        
     }
 }
 

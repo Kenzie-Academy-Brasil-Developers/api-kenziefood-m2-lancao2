@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
     <title>Kenzie Food Página do Administrador</title>
 </head>
 <body>
@@ -44,7 +45,52 @@
         <button class="btnAddNew">Adicionar novo produto</button>
       </nav>
 </header>
-
+<main>
+    <div class="tabel">
+        <div class="tabel_title">
+            <ul>
+                <li class="tabel_title_produt">
+                    <p>Produto</p>
+                </li>
+                <li class="tabel_title_category">
+                    <p>Categoria</p>
+                </li>
+                <li class="tabel_title_description">
+                    <p>Descreção</p>
+                </li>
+                <li class="tabel_title_action">
+                    <p>Ações</p>
+                </li>
+            </ul>
+        </div>
+        <ul class="tabel_list">
+            <ul class="tabel_list_iten"> <!--Cada iten é feito daqui -->
+                <ul class="tabel_list_iten_product">
+                    <li class="tabel_list_iten_pic">
+                        <img src="../img/product1.png" alt="pizza">
+                    </li>
+                    <li class="tabel_list_iten_name">
+                        <p>Pizza vegetariana de palmito</p>
+                    </li>
+                </ul>
+                <li class="tabel_list_iten_category">
+                    <p>
+                        Panificação
+                    </p>
+                </li>
+                <li class="tabel_list_iten_description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est culpa ad, iusto mollitia alias molestiae quisquam, dolores corporis unde ducimus quo fugit itaque. Omnis, cum quis aut laudantium ad quod!
+                    </p>
+                </li>
+                <li class="tabel_list_iten_action">
+                    <button class="action_edit"></button>
+                    <button class="action_delet"></button>
+                </li>
+            </ul> <!--Ate aqui -->
+        </ul>
+    </div>
+</main>
 <script src="https://kit.fontawesome.com/6e9eea67d0.js" crossorigin="anonymous"></script>
 </body>
 </html>
