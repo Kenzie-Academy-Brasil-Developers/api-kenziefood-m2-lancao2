@@ -8,3 +8,7 @@ import { Dashboard } from "../../src/models/Dashboard.js"
   Dashboard.showProducts(products)
 })()
 
+const button_logout = document.querySelector(".user")
+button_logout.addEventListener("click" , () =>{
+  
+})
