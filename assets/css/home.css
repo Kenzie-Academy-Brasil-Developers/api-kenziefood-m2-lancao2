@@ -135,6 +135,8 @@ nav{
 
 .card_pic img {
   width: 100%;
+  max-width: 300px;
+  height: 100%; 
   max-height: 300px;
   min-height: 100%;
 }
