@@ -61,14 +61,20 @@ export const KenzieFood = class {
 
   }
 
-  static async postUser(object){
-    let response = await fetch(`${KenzieFood.url}register`, {
+  static async userRegister(object){
+    const response = await fetch(`${KenzieFood.url}register`, {
         "method": "POST",
         "headers": {
             "Content-Type": "application/json"
         },
         "body":JSON.stringify(object)
     })
-    return response
-}
+      .then(response => response.json())
+      .catch(error => error)
+
+    if (response.error) {
+      return console.log(response.error)
+    }
+    location.assign('./login.html')
+  }
 }

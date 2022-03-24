@@ -47,7 +47,7 @@
 </header>
 <div class="pop-up_logout">
   <div class="pop-up_logout_conteiner">
-    <button class="pop-up_logout_button">Logout</button>
+    <button class="pop-up_logout_button" id="logout-button">Logout</button>
     <div class="pop-up_logout_user">
       <p>Usuario:</p>
       <p class="emailSection">email@gmail.com</p>
@@ -78,8 +78,12 @@
 <div class="modalDelet">
   <div class="modalDelet_box">
     <div class="modalDelet_box_conteiner">
-      <h2>Exclusão de produto</h2>
+      <div class="headerDeletModal">
+        <h2>Exclusão de produto</h2>
+        <button class="close_delet"></button> 
+      </div>
       <div class="modalDelet_box_conteiner_inside">
+        <h2>Tem certeza que deseja exluir este produto?</h2>
         <div class="modalDelet_box_conteiner_inside_button">
           <button class="actionDeletButton">Sim</button>
           <button class="actionNotDeletButton">Não</button>

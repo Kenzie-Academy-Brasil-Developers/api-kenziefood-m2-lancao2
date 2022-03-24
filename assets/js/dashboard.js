@@ -17,8 +17,6 @@ const logout = () => {
   location.assign('../../src/pages/login.html')
 }
 
-
-
 let click = 0 
 const popup_logout = document.querySelector(".pop-up_logout")
 const userButton = document.querySelector('.user')
