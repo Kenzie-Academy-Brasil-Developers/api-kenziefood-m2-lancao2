@@ -22,7 +22,6 @@ export const KenzieFood = class {
     if (response.error) {
       return console.log(response.error)
     }
-
     return response
   }
 
@@ -49,6 +48,7 @@ export const KenzieFood = class {
       return console.log(response.error)
     }
 
+    localStorage.setItem('userData', JSON.stringify(userData))
     localStorage.setItem('userToken', response)
     location.assign('../pages/dashboard.html')
   }
