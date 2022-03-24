@@ -24,32 +24,32 @@
             </div>      
             <div class="form--display--column">
                   <label for="produto">Descrição</label>
-                  <textarea class="form-input" name="produto" id="" cols="" rows="" placeholder="Digitar a descrição"></textarea>
+                  <textarea class="form-input" name="descricao" id="" cols="" rows="" placeholder="Digitar a descrição"></textarea>
             </div>
 
             
             <div class="form--display--column form--checkbox">
                   <label for="">Categorias</label>
                   <div>                  
-                        <input type="checkbox" name="Panificadora" placeholder="Panificadora">
-                        <label for="Panificadora">Panificadora</label>
+                        <input id="Panificadora" type="checkbox" name="categoria" value="Panificadora" placeholder="Panificadora">
+                        <!-- <label for="Panificadora">Panificadora</label> -->
 
-                        <input type="checkbox" name="Frutas">
-                        <label for="Frutas">Frutas</label>
+                        <input id="Frutas" type="checkbox" name="categoria" value="Frutas">
+                        <!-- <label for="Frutas">Frutas</label> -->
 
-                        <input type="checkbox" name="Bebidas">
-                        <label for="Bebidas">Bebidas</label>
+                        <input id="Bebidas" type="checkbox" name="categoria" value="Bebidas">
+                        <!-- <label for="Bebidas">Bebidas</label> -->
                   </div>
             </div class="form--display">
 
             <div class="form--display--column">
                   <label for="price">Valor do Produto</label>
-                  <input class="form--input" type="text" name="price" placeholder="Digitar o valor aqui">
+                  <input class="form--input" type="text" name="preco" placeholder="Digitar o valor aqui">
             </div class="form--display">
             
             <div class="form--display--column">
                   <label for="image">Link da imagem</label>
-                  <input class="form--input" type="text" name="image" placeholder="Inserir link">
+                  <input class="form--input" type="text" name="imagem" placeholder="Inserir link">
             </div>
 
             <div class="form--display--column form--button">
@@ -57,5 +57,6 @@
             </div>
             
       </form>
+      <script src="/assets/js/modal-cadastro-produto.js"></script>
 </body>
 </html>
