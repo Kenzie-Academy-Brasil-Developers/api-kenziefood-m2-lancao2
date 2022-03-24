@@ -36,6 +36,6 @@ export class Dashboard {
   }
 
   static async deleteProduct () {
-
+    
   }
 }
