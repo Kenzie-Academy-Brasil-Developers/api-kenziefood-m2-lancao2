@@ -7,7 +7,7 @@ export const KenzieFood = class {
     return (await fetch('https://kenzie-food-api.herokuapp.com/products')).json()
   }
 
-  static async getPivateProducts (authToken) {
+  static async getPivateProducts(authToken) {
     const url = 'https://kenzie-food-api.herokuapp.com/my/products'
     const response = await fetch(url, {
       method: 'GET',

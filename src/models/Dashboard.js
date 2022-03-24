@@ -12,7 +12,27 @@ export class Dashboard {
     
     Dashboard.products.forEach(product => {
       Dashboard.container.innerHTML += createDashboardCard(product)
+    
     })
+    const modalDeletClose = document.querySelector(".close_delet")
+    modalDeletClose.addEventListener("click" , () =>{
+      modalDelet.style.display = "none"
+    })
+    // abrir modal deletar produto 
+    const modalDelet = document.querySelector(".modalDelet")
+    const actionDeletopen = document.querySelector(".tabel_list")
+
+      actionDeletopen.addEventListener("click" , (event) =>{
+      
+      const intenSelected = event.target
+      if(intenSelected.tagName === "BUTTON"){
+        if(intenSelected.dataset.delete){
+          modalDelet.style.display = "flex"
+
+          Dashboard.deleteProduct(intenSelected.dataset.delete)
+        }
+      }
+    }) 
   }
 
   static async addProduct (productData) {
@@ -34,7 +54,15 @@ export class Dashboard {
     console.log(response)
   }
 
-  static async deleteProduct (e) {
-   
+  static async deleteProduct(id) {
+    const url = `https://kenzie-food-api.herokuapp.com/my/products/${id}`
+    const response = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        "Authorization": `Bearer ${localStorage.getItem("userToken")}`
+      }
+    })
+    Dashboard.showProducts(products)
   }
+
 }

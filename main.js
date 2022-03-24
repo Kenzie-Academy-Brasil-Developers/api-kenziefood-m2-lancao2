@@ -17,7 +17,7 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
     loginButton.classList.toggle('d-none')
     logoutButton.classList.toggle('d-none')
 
-    logoutButton.addEventListener('click', logout)
+    logoutButton.addEventListener('click', redirectToAdminPage)
 
     ShowCase.showProducts(publicProducts.concat(privateProducts))
     return
@@ -72,9 +72,8 @@ const removeProduct = (event) => {
   }
 }
 
-const logout = () => {
-  localStorage.clear()
-  location.assign('../../src/pages/login.html')
+const redirectToAdminPage = () => {
+  location.assign('../../src/pages/dashboard.html')
 }
 
 const input = document.querySelector('.title--search')
