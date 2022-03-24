@@ -5,9 +5,18 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
 
 /* ============== Main function ==================*/
 (async () => {
-  const products = await KenzieFood.getPublicProducts()
+  const publicProducts = await KenzieFood.getPublicProducts()
   Cart.createProductsInStorage()
-  ShowCase.showProducts(products)
+
+  if (localStorage.getItem('userToken')) {
+    const authToken = localStorage.getItem('userToken')
+    const privateProducts = await KenzieFood.getPivateProducts(authToken)
+
+    ShowCase.showProducts(publicProducts.concat(privateProducts))
+    return
+  }
+  
+  ShowCase.showProducts(publicProducts)
 })()
 /* ============== End main function ==============*/
 
