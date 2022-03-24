@@ -1,7 +1,6 @@
 const convertToBRL = value => 
   value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
-
 const createCard =  ({ id, nome, categoria, imagem, preco, descricao }) => {
   const cardTemplade = `
     <div class="card" data-id="${id}">
@@ -44,4 +43,34 @@ const createCartCard = ({ id, nome, categoria, imagem, preco }) => {
   return card
 }
 
-export { createCard, createCartCard }
+const createDashboardCard = ({ imagem, categoria, descricao, nome, id, preco }) => {
+  const card =`
+    <ul class="tabel_list_iten" data-id="${id}" data-price="${preco}">
+      <ul class="tabel_list_iten_product">
+          <li class="tabel_list_iten_pic">
+              <img src="${imagem}" alt="pizza">
+          </li>
+          <li class="tabel_list_iten_name">
+              <p>${nome}</p>
+          </li>
+      </ul>
+      <li class="tabel_list_iten_category">
+          <p>
+              ${categoria}
+          </p>
+      </li>
+      <li class="tabel_list_iten_description">
+          <p>
+              ${descricao}
+          </p>
+      </li>
+      <li class="tabel_list_iten_action">
+          <button class="action_edit" data-edit="${id}"></button>
+          <button class="action_delet" data-delete="${id}"></button>
+      </li>
+    </ul>`
+
+    return card
+} 
+
+export { createCard, createCartCard, createDashboardCard }

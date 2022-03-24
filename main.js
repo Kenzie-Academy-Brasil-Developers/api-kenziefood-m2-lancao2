@@ -5,7 +5,8 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
 
 /* ============== Main function ==================*/
 (async () => {
-  const products = await KenzieFood.getProducts()
+  const products = await KenzieFood.getPublicProducts()
+  Cart.createProductsInStorage()
   ShowCase.showProducts(products)
 })()
 /* ============== End main function ==============*/
@@ -33,7 +34,7 @@ const filterProducts = async e => {
   const clickedElement = e.target
   
   if (clickedElement.tagName == 'BUTTON') {
-    const products = await KenzieFood.getProducts()
+    const products = await KenzieFood.getPublicProducts()
     ShowCase.filterByCategory(clickedElement.name, products)
   }
 }
@@ -44,7 +45,14 @@ const addToCart = e => {
   
   if(productId) {
     const productToAdd = ShowCase.products.find(({ id }) => +id === +productId)
-     Cart.addCart(productToAdd)
+    Cart.addCart(productToAdd)
+  }
+}
+
+const removeProduct = (event) => {
+  const button = event.target;
+  if(button.tagName === 'BUTTON' || button.tagName === 'IMG'){
+     Cart.removeCart(event)
   }
 }
 
@@ -63,5 +71,6 @@ categoryButtonsNav.addEventListener('click', filterProducts)
 const showCaseContainer = ShowCase.container
 showCaseContainer.addEventListener('click', addToCart)
 
-
+const divProducts = document.querySelector('.container');
+divProducts.addEventListener('click', removeProduct);
 

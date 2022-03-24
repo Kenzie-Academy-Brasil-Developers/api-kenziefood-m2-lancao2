@@ -317,8 +317,9 @@ main{
 
 }
 
-
-
+.d-none {
+  display: none;
+}
 
 @media (min-width: 575px){
     .title--top{
@@ -350,4 +351,5 @@ main{
         
     }
 }
+
 
