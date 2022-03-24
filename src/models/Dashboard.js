@@ -1,5 +1,7 @@
 import { createDashboardCard } from "../utils/functions.js"
 
+
+
 export class Dashboard {
   static container = document.querySelector('.tabel_list')
   static products = []
@@ -13,12 +15,7 @@ export class Dashboard {
     })
   }
 
-  static async addProduct (e) {
-    e.preventDefault()
-
-    const form = e.target
-    const formData = new FormData(form)
-    const productData = Object.fromEntries(formData.entries())
+  static async addProduct (productData) {
     const authToken = localStorage.getItem('userToken')
 
     const response = await fetch('https://kenzie-food-api.herokuapp.com/my/products', {
@@ -32,10 +29,12 @@ export class Dashboard {
       .then(response => response.json())
       .catch(error => error)
 
+    if (response.error) return console.log(response.error)
+    
     console.log(response)
   }
 
-  static async deleteProduct () {
-    
+  static async deleteProduct (e) {
+   
   }
 }

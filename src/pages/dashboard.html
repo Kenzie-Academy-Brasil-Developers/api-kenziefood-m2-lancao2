@@ -55,6 +55,54 @@
   </div>
 </div>
 <main>
+  <div class="form--wrapper hidden">
+    <form id="open--modal" class="form--modal--open" action="">
+      <div class="form--display--row form--title">
+            <h3>Cadastro de Produto</h3>
+            <button class="form--button">X</button>
+      </div>
+      <div class="form--display--column">
+            <label for="nome">Nome do Produto</label>
+            <input class="form--input" type="text" name="nome" placeholder="Digitar o nome">
+      </div>      
+      <div class="form--display--column">
+            <label for="produto">Descrição</label>
+            <textarea class="form-input" name="descricao" id="" cols="" rows="" placeholder="Digitar a descrição"></textarea>
+      </div>
+    
+      
+      <div class="form--display--column form--checkbox">
+            <label for="">Categorias</label>
+            <div>                  
+                  <input id="Panificadora" type="checkbox" name="categoria" value="Panificadora" placeholder="Panificadora">
+                  <!-- <label for="Panificadora">Panificadora</label> -->
+    
+                  <input id="Frutas" type="checkbox" name="categoria" value="Frutas">
+                  <!-- <label for="Frutas">Frutas</label> -->
+    
+                  <input id="Bebidas" type="checkbox" name="categoria" value="Bebidas">
+                  <!-- <label for="Bebidas">Bebidas</label> -->
+            </div>
+      </div class="form--display">
+    
+      <div class="form--display--column">
+            <label for="price">Valor do Produto</label>
+            <input class="form--input" type="text" name="preco" placeholder="Digitar o valor aqui">
+      </div class="form--display">
+      
+      <div class="form--display--column">
+            <label for="image">Link da imagem</label>
+            <input class="form--input" type="text" name="imagem" placeholder="Inserir link">
+      </div>
+    
+      <div class="form--display--column form--button">
+            <button>Cadastrar Produto</button>
+      </div>
+      
+    </form>
+  </div>
+    
+
     <div class="tabel">
         <div class="tabel_title">
             <ul>
@@ -88,6 +136,8 @@
     </div>
   </div>
 </div>
+
+
 <script src="https://kit.fontawesome.com/6e9eea67d0.js" crossorigin="anonymous"></script>
 <script type="module" src="../../assets/js/dashboard.js"></script>
 </body>
