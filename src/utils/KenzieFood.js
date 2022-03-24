@@ -22,6 +22,8 @@ export const KenzieFood = class {
     if (response.error) {
       return console.log(response.error)
     }
+
+    return response
   }
 
   static async filterProducts(event) {
@@ -49,6 +51,14 @@ export const KenzieFood = class {
 
     localStorage.setItem('userToken', response)
     location.assign('../pages/dashboard.html')
+  }
+
+  static createProduct () {
+    
+  }
+
+  static async deleteProduct () {
+
   }
 
   static async postUser(object){
