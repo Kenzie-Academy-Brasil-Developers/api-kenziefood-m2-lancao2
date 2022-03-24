@@ -21,8 +21,8 @@ export class Dashboard {
     // abrir modal deletar produto 
     const modalDelet = document.querySelector(".modalDelet")
     const actionDeletopen = document.querySelector(".tabel_list")
-    //for(let i = 0; actionDeletopen.length; i++){
-      actionDeletopen/*[i]*/.addEventListener("click" , (event) =>{
+
+      actionDeletopen.addEventListener("click" , (event) =>{
       
       const intenSelected = event.target
       if(intenSelected.tagName === "BUTTON"){
@@ -32,11 +32,7 @@ export class Dashboard {
           Dashboard.deleteProduct(intenSelected.dataset.delete)
         }
       }
-      
-      
-      })
-    //}
-    
+    }) 
   }
 
   static async addProduct (productData) {
