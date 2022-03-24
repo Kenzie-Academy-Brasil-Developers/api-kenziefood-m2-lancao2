@@ -19,7 +19,7 @@ import { Dashboard } from "../../src/models/Dashboard.js"
 
 })()
 
-const logout = () => {
+export const logout = () => {
   localStorage.clear()
   location.assign('../../src/pages/login.html')
 }
