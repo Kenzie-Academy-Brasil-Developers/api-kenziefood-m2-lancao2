@@ -74,7 +74,7 @@ export class Cart {
   static createProductsInStorage() {
     const storagedItens = Cart.getStorage()
 
-    if (storagedItens?.length) {
+    if (storagedItens) {
       Cart.container.innerHTML = ''
 
       storagedItens.forEach(item => {
