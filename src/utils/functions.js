@@ -73,4 +73,10 @@ const createDashboardCard = ({ imagem, categoria, descricao, nome, id, preco }) 
     return card
 } 
 
+const ccreateDasboardEdit = ({ id, nome, categoria, imagem, preco }) => {
+  const card =`
+  
+  `
+}
+
 export { createCard, createCartCard, createDashboardCard }
