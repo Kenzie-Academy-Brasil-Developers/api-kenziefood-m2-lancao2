@@ -9,37 +9,29 @@ export class Cart {
 
   static async addCart(product){
     Cart.products.push(product)
+    Cart.container.innerHTML += createCartCard(product) 
 
-    Cart.setStorage(JSON.stringify(Cart.products));
-
-    Cart.container.innerHTML += createCartCard(product)  
-
+    Cart.setStorage(Cart.products)
     Cart.sumProducts(product.preco)
   }
 
   static async removeCart(event){
-    const button = event.target;
-    const card = button.closest('.card--cart');
+    const button = event.target
+    const card = button.closest('.card--cart')
 
-    if(Cart.getStorage()){
-      Cart.products = JSON.parse(Cart.getStorage());
-    }  
-    
     const product = Cart.products.find((el) => {
       return el.id == card.dataset.id
     })
     
-    const index = Cart.products.indexOf(product);
+    const index = Cart.products.indexOf(product)
     Cart.products.splice(index, 1)
-
     Cart.removeStorage(button, product)
 
     if(Cart.products.length === 0){
-      Cart.setStorage(JSON.stringify(Cart.products));
+      localStorage.clear()
     }   
 
     Cart.subProducts(product.preco)
-
     card.remove();
   }
 
@@ -58,16 +50,16 @@ export class Cart {
   }
 
   static setStorage(products){
-      localStorage.setItem('@cartProducts', products)
+    localStorage.setItem('@cartProducts', JSON.stringify(products))
   }
 
   static getStorage(){
-      return localStorage.getItem('@cartProducts')
+    return JSON.parse(localStorage.getItem('@cartProducts'))
   }
 
   static removeStorage(button ,product){
     const card = button.closest('.card--cart');
-    const items = JSON.parse(localStorage.getItem('@cartProducts'))
+    const items = Cart.getStorage()
 
     const item = items.find((el) => {
       return el.id == card.dataset.id
@@ -77,19 +69,17 @@ export class Cart {
     items.splice(index, 1);
 
     Cart.setStorage(items)
-
   }
 
-  static createProductsInStorage(){
-      const cartStorage = JSON.parse(Cart.getStorage())
-   
-      if(cartStorage !== null){
-        cartStorage.forEach((el) => {
-          Cart.container.innerHTML += createCartCard(el)
-        })
-      }else{
-        localStorage.removeItem('@cartProducts')
-      }
-      
+  static createProductsInStorage() {
+    const storagedItens = Cart.getStorage()
+
+    if (storagedItens?.length) {
+      Cart.container.innerHTML = ''
+
+      storagedItens.forEach(item => {
+        Cart.addCart(item)
+      })
+    }
   }
 }

@@ -98,6 +98,14 @@ body {
   margin: 10px auto;
 }
 
+.register-section p:first-child {
+  font-size: 14.5px;
+}
+
+.register-section p:last-child {
+  font-size: 13.5px;
+}
+
 .register-section p:last-child a{
   font-weight: 300;
   color: #000000;

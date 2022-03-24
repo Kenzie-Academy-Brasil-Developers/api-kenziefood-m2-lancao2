@@ -5,12 +5,11 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
 
 /* ============== Main function ==================*/
 (async () => {
-  const products = await KenzieFood.getProducts()
+  const products = await KenzieFood.getPublicProducts()
+  Cart.createProductsInStorage()
   ShowCase.showProducts(products)
 })()
 /* ============== End main function ==============*/
-
-Cart.createProductsInStorage()
 
 const openModal = () => {
   const modal = document.getElementById("modal")
@@ -35,7 +34,7 @@ const filterProducts = async e => {
   const clickedElement = e.target
   
   if (clickedElement.tagName == 'BUTTON') {
-    const products = await KenzieFood.getProducts()
+    const products = await KenzieFood.getPublicProducts()
     ShowCase.filterByCategory(clickedElement.name, products)
   }
 }
@@ -46,11 +45,7 @@ const addToCart = e => {
   
   if(productId) {
     const productToAdd = ShowCase.products.find(({ id }) => +id === +productId)
-     Cart.addCart(productToAdd)
-
-    //  const buttons = document.querySelectorAll(`.card--remove button`)
-    //  Array.from(buttons).forEach(button =>
-    //     button.addEventListener('click', Cart.removeCart))
+    Cart.addCart(productToAdd)
   }
 }
 
@@ -59,9 +54,7 @@ const removeProduct = (event) => {
   if(button.tagName === 'BUTTON' || button.tagName === 'IMG'){
      Cart.removeCart(event)
   }
-  console.log(button)
 }
-
 
 const input = document.querySelector('.title--search')
 input.addEventListener('keyup', KenzieFood.filterProducts)

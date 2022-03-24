@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+    <title>Kenzie Food Página do Administrador</title>
+</head>
+<body>
+<header>
+    <div class="title--top">
+        <p class="title--logo title--logo--black">
+          Kenzie
+          <span class="title--logo title--logo--red">
+            Food
+          </span>
+        </p>
+        <div class="title-input-login">
+          <input type="search" name="Pesquisa Nome" class="title--search" placeholder="Pesquisar por Produto">
+          <div class="user"></div>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav--top">
+          <li> <button class="button nav--button" id="todos">Todos</button></li>
+          <li>
+            <button name="Panificadora" class="button nav--button panificadora">
+              <img src="../icons/Icon_bread.png" alt="Bread Icon">Panificadora
+            </button>
+          </li>
+          <li>
+            <button name="Frutas" class="button nav--button frutas">
+              <img src="../icons/Icon_fruits.png" alt="Fruits Icon"> Frutas
+            </button>
+          </li>
+          <li>
+            <button name="Bebidas" class="button nav--button bebidas">
+              <img src="../icons/Icon_glass of wine.png" alt="Wine Icon">Bebidas
+            </button>
+          </li>
+        </ul>
+        <button class="btnAddNew">Adicionar novo produto</button>
+      </nav>
+</header>
+<div class="pop-up_logout">
+  <div class="pop-up_logout_conteiner">
+    <button class="pop-up_logout_button" id="logout-button">Logout</button>
+    <div class="pop-up_logout_user">
+      <p>Usuario:</p>
+      <p class="emailSection">email@gmail.com</p>
+    </div>
+  </div>
+</div>
+<main>
+    <div class="tabel">
+        <div class="tabel_title">
+            <ul>
+                <li class="tabel_title_produt">
+                    <p>Produto</p>
+                </li>
+                <li class="tabel_title_category">
+                    <p>Categoria</p>
+                </li>
+                <li class="tabel_title_description">
+                    <p>Descreção</p>
+                </li>
+                <li class="tabel_title_action">
+                    <p>Ações</p>
+                </li>
+            </ul>
+        </div>
+        <ul class="tabel_list"></ul>
+    </div>
+   
+</main>
+<script src="https://kit.fontawesome.com/6e9eea67d0.js" crossorigin="anonymous"></script>
+<script type="module" src="../../assets/js/dashboard.js"></script>
+</body>
+</html>
