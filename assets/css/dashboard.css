@@ -1,6 +1,10 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+.hidden{
+    visibility: hidden;
+    display: none;
+}
 /*Header Fim*/
 .title--top{
     margin-top: 20px;
@@ -464,8 +468,7 @@ main{
     }
     100%{
         top: 10%;
-    }
-    
+    }    
 }
 
 @media (min-width: 575px){
@@ -498,5 +501,3 @@ main{
         
     }
 }
-
-

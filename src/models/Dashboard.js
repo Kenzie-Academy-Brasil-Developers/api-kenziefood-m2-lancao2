@@ -1,17 +1,25 @@
 import { createDashboardCard } from "../utils/functions.js"
-import { createDasboardEdit } from "../utils/functions.js"
+import { createDashboardEdit } from "../utils/functions.js"
+import { KenzieFood } from "./../utils/KenzieFood.js"
 
 export class Dashboard {
   static container = document.querySelector('.tabel_list')
   static products = []
+  
 
   static async showProducts (products) {
     console.log(products)
     Dashboard.products = products
-    
+    this.container.addEventListener("click", openModalEdit, {once: true});
     Dashboard.products.forEach(product => {
       Dashboard.container.innerHTML += createDashboardCard(product)
+      
     })
+  }
+
+  static resetContainer(){
+    this.container.innerHTML = ""
+    this.showProducts(this.products)
   }
 
   static async addProduct (e) {
@@ -57,18 +65,32 @@ export class Dashboard {
   }
   static createModalEdit(id){
     const product = this.products.find(element => element.id == id)
-    createDasboardEdit(product)
-
+    document.querySelector("main").innerHTML += createDashboardEdit(product)
+    const formEdit = document.querySelector(".modal--edit--form")
+    formEdit.addEventListener("submit", (event)=> getEditData(event,id))
+    const modalEditDelete = document.querySelector(".modal--edit--card--close")
+    modalEditDelete.addEventListener("click", closeModalEdit)
   }
+}
+
+function getEditData(e,id) {
+  e.preventDefault()
+  const form = new FormData(e.target)
+  const productEditData = Object.fromEntries(form.entries())
+  console.log(productEditData)
+  KenzieFood.editProduct(productEditData,id)  
 }
 
 const openModalEdit = e =>{
+  console.log("chamou")
   const clickedElement = e.target
   const productId = clickedElement.dataset.edit
     if (clickedElement.className == "action_edit"){
-    Dashboard.createModalEdit(productId)
+      Dashboard.createModalEdit(productId)
   }
 }
 
-const listProducts = document.querySelector(".tabel_list")
-listProducts.addEventListener('click', openModalEdit);
+const closeModalEdit = ()=> {
+  document.querySelector(".modal--edit").remove();
+  window.location.reload();
+}

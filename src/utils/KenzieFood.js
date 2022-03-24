@@ -53,6 +53,23 @@ export const KenzieFood = class {
     location.assign('../pages/dashboard.html')
   }
 
+  static async editProduct(object,id){
+    console.log(id)
+    const response = await fetch(`https://kenzie-food-api.herokuapp.com/my/products/${id}`, {
+      "method": "PATCH",
+      "headers": {
+          "Content-Type" : "application/json",
+          "Authorization": `Bearer ${localStorage.getItem('userToken')}`
+      },
+      "body":JSON.stringify(object)
+    }).then(response => response.json())
+    .catch(error => error)
+  if (response.error){
+    return console.log(response.error)
+  }
+   return console.log(response)
+  }
+
   static createProduct () {
     
   }
