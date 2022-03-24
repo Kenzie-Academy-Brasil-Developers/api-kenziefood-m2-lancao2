@@ -1,0 +1,63 @@
+body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      height: 100vh;
+}
+
+form{
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      width: 496px;
+      height: 755px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 8px;
+}
+
+.form--display--column{
+      display: flex;
+      flex-direction: column;
+      margin: 0 28px;
+}
+
+.form--display--row{
+      display: flex;
+      margin: 0 28px;
+}
+
+.form--display--row:first-child{
+      margin: 0;
+}
+
+.form--title{
+      height: 70px;
+      background-color: #F8F9FA;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px 8px 0 0;
+}
+
+.form--title h3{
+      margin-left: 28px;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--title button{
+      margin-right: 28px;
+      border: none;
+      background-color: #E9ECEF;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 400;
+}
+
+
+
