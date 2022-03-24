@@ -30,11 +30,11 @@ export class ShowCase {
 
   static modalErrorLogin(error){
     let div = document.createElement("div")
-    div.classList.add("error--div")
+    div.classList.add("error--div--login")
     let errorMessage = document.createElement("p")
-    errorMessage.classList.add("error--text")
+    errorMessage.classList.add("error--text--login")
     let errorType = document.createElement("p")
-    errorType.classList.add("error--text")
+    errorType.classList.add("error--text--login")
     errorType.innerText = error
     errorMessage.innerText = `Não foi possível fazer login.`
     div.appendChild(errorMessage)

@@ -47,7 +47,7 @@ export const KenzieFood = class {
     if (response.error) {
       ShowCase.modalErrorLogin(response.error)
     } else {
-      localStorage.setItem('userData', JSON.stringify(userData))
+    localStorage.setItem('userData', JSON.stringify(userData))
     localStorage.setItem('userToken', response)
     location.assign('../pages/dashboard.html')
     }
