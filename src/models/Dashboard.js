@@ -1,7 +1,5 @@
 import { createDashboardCard } from "../utils/functions.js"
 
-
-
 export class Dashboard {
   static container = document.querySelector('.tabel_list')
   static products = []
