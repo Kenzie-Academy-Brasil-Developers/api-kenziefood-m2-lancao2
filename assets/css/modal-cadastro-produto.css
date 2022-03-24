@@ -10,6 +10,9 @@ body{
       justify-content: center;
       background-color: black;
       height: 100vh;
+      width: 100vw;
+      z-index: 9999;
+      position: absolute;
 }
 
 form{
@@ -22,6 +25,7 @@ form{
       justify-content: space-between;
       border-radius: 8px;
       display: none;
+      position: absolute;
 }
 
 .form--modal--open:target{

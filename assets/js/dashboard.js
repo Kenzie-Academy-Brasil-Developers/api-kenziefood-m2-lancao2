@@ -10,6 +10,13 @@ import { Dashboard } from "../../src/models/Dashboard.js"
 
   informationDiv.textContent = userEmail
   Dashboard.showProducts(products)
+
+  const modalPage = await fetch('../../src/pages/modal-cadastro-produto.html')
+    .then(response => response.text())
+
+  const body = document.body
+  // body.innerHTML = modalPage
+
 })()
 
 const logout = () => {
