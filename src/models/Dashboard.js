@@ -1,5 +1,7 @@
 import { createDashboardCard } from "../utils/functions.js"
 
+
+
 export class Dashboard {
   static container = document.querySelector('.tabel_list')
   static products = []
@@ -15,7 +17,7 @@ export class Dashboard {
 
   static async addProduct (e) {
     e.preventDefault()
-
+    
     const form = e.target
     const formData = new FormData(form)
     const productData = Object.fromEntries(formData.entries())
@@ -35,7 +37,7 @@ export class Dashboard {
     console.log(response)
   }
 
-  static async deleteProduct () {
-    
+  static async deleteProduct (e) {
+   
   }
 }

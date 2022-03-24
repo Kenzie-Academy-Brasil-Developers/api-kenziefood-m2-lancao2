@@ -1,5 +1,6 @@
 import { KenzieFood } from "../../src/utils/KenzieFood.js";
 import { Dashboard } from "../../src/models/Dashboard.js"
+import { RegisterProducts } from "/assets/js/modal-cadastro-produto.js"
 
 (async () => {
   const authToken = localStorage.getItem('userToken')
@@ -45,3 +46,13 @@ userButton.addEventListener("click" , () =>{
   }
 })
 
+
+
+
+const buttonAddProduct = document.querySelector('.btnAddNew');
+buttonAddProduct.addEventListener('click', RegisterProducts.showModal)
+
+
+const formWrapper = document.querySelector('.form--wrapper');
+formWrapper.addEventListener('click', RegisterProducts.closeModal)
+console.log(formWrapper)
