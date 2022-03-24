@@ -132,6 +132,12 @@ nav{
   justify-content: space-around;
 }
 
+.card_pic img {
+  width: 100%;
+  max-height: 300px;
+  min-height: 100%;
+}
+
 .card_description{
   width: 300px;
   display: flex;
@@ -395,6 +401,7 @@ main{
   min-height: 400px;
   padding: 0 20px;
   box-sizing: border-box;
+  gap: 5px;
 }
 
 main #modalButton{
@@ -495,6 +502,13 @@ main #modalButton{
         max-width: 300px;
         height: 200px;
     }
+
+    .card_pic img {
+      width: 100%;
+      max-height: 300px;
+      min-height: 100%;
+    }
+
     .card_pic img:hover{
         border: 3px solid #FF2253;
         border-radius: 8px;
