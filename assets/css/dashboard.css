@@ -324,7 +324,6 @@ main{
   display: none;
 }
 
-<<<<<<< HEAD
 .form--wrapper{
     width: 100vw;
     height: 100vh;
@@ -544,8 +543,6 @@ textarea::placeholder{
 
 
 
-=======
->>>>>>> a7cbd3acae9f0fc959d0c2c27f80fad6304b2a3e
 /* Modal pra delet um item da API*/
 .modalDelet{
     background-color: #2125294b;
