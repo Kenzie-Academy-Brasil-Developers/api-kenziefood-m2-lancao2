@@ -1,5 +1,6 @@
 import { KenzieFood } from "../../src/utils/KenzieFood.js";
 import { Dashboard } from "../../src/models/Dashboard.js"
+import { RegisterProducts } from "/assets/js/modal-cadastro-produto.js"
 
 (async () => {
   const authToken = localStorage.getItem('userToken')
@@ -42,3 +43,7 @@ userButton.addEventListener("click" , () =>{
   }
 })
 
+
+const buttonAddProduct = document.querySelector('.btnAddNew');
+console.log(buttonAddProduct)
+buttonAddProduct.addEventListener('click', RegisterProducts.showModal)
