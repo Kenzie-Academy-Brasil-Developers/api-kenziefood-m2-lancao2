@@ -45,6 +45,9 @@
     background-color: #F8F9FA;
     border-color: #212529;;
 }
+nav{
+    margin: 25px 10px 25px 0px;
+}
 
 .nav--top {
   display: flex;
@@ -405,13 +408,13 @@ main #modalButton{
     display: block;
     position: fixed;
     bottom: 0;
-    
 }
 
 .cart_Button::before{
     content: "\f217";
     font: normal normal normal 14px/1 FontAwesome !important;
 }
+
 .card--image img{
     width: 70px;
     height: 70px;
@@ -431,13 +434,13 @@ main #modalButton{
     font-weight: bold;
     margin-left: 2px;
 }
+
 .title-input-login{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    padding: 15px 20px;
-
+    margin-top: 25px;
 }
 
 @media (min-width: 769px){
@@ -449,12 +452,9 @@ main #modalButton{
         width: 100%;
         padding: 0 80px 0 150px;
     }
-    .nav--top {
-      margin-left: 150px;
-    }
-
-    .title--logo--black {
-      padding-left: 5px;
+    .title--logo--black, .nav--top{
+        margin-left: 117px;
+        margin: 50px 10px 50px 0px;
     }
 
     .nav--top::-webkit-scrollbar {
@@ -498,9 +498,8 @@ main #modalButton{
     .card_pic img:hover{
         border: 3px solid #FF2253;
         border-radius: 8px;
-
-
     }
+    
     main{
         display: flex;
         flex-direction: row;
@@ -547,6 +546,7 @@ main #modalButton{
     .title-input-login{
         margin-right: 10px;
         column-gap: 1.5vw;
+        
     }
 }
 
