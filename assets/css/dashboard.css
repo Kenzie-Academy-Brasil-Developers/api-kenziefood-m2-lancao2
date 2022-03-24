@@ -220,6 +220,20 @@ main{
     font-size: 15.5px;
     color: #868E96;
 }
+.tabel_list_iten_description::-webkit-scrollbar {
+    border: 1px solid #FFFFFF;
+    height: 2px;
+
+  }
+  
+  .tabel_list_iten_description::-webkit-scrollbar-thumb {
+    background: #FF2253;   
+    border: none;
+    border-radius: 15px;
+    
+  }
+  
+
 .tabel_list_iten_action{
     margin-right: 31.5px;
 }
@@ -234,6 +248,7 @@ main{
         line-height: 14px;
         font: normal normal normal 25px/1 FontAwesome !important;
         color: #757677;
+        cursor: pointer;
 
 }
 
@@ -243,7 +258,7 @@ main{
     line-height: 14px;
     font: normal normal normal 22.5px/1 FontAwesome !important;
     color: #757677;
-
+    cursor: pointer;
 }
 
 
