@@ -1,3 +1,8 @@
+button, input, textarea{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
 body{
       display: flex;
       flex-direction: column;
@@ -16,7 +21,16 @@ form{
       flex-direction: column;
       justify-content: space-between;
       border-radius: 8px;
+      display: none;
 }
+
+.form--modal--open:target{
+      display: flex;
+}
+
+/* .form--modal--close:target{
+      display: none;
+} */
 
 .form--display--column{
       display: flex;
@@ -47,7 +61,11 @@ form{
       font-weight: 500;
 }
 
-.form--title button{
+.form--title a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
       margin-right: 28px;
       border: none;
       background-color: #E9ECEF;
@@ -59,5 +77,77 @@ form{
       font-weight: 400;
 }
 
+label{
+      font-size: 14px;
+      font-weight: 400;
+      color: #212529;
+      margin-bottom: 16px;
+}
 
+.form--input{
+      width: 440px;
+      height: 52px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      padding: 0 20px;
+}
+
+.form--input::placeholder{
+      color: #868E96;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+}
+
+textarea{
+      width: 440px;
+      height: 80px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      resize: none;
+      padding: 10px 20px;
+}
+
+textarea::placeholder{
+      font-family: 'Poppins', sans-serif;
+      color: #868E96;
+      font-size: 16px;
+      font-weight: 400;      
+}
+
+.form--checkbox div{
+      display: flex;
+      justify-content: space-between;
+}
+
+.form--checkbox div label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div input{
+      appearance: none;
+}
+
+.form--button button{
+      margin-bottom: 37px;
+      width: 440px;
+      height: 52px;
+      background-color: #FF2253;
+      border: none;
+      border-radius: 32px;
+      color:white;
+      font-size: 16px;
+      font-weight: 500;
+}
 

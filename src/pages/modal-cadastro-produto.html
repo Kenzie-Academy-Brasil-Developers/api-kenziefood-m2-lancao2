@@ -12,23 +12,23 @@
       <title>Modal</title>
 </head>
 <body>
-      <button>Adicionar Novo Produto</button>
-      <form action="">
+      <a href="#open--modal">Adicionar Novo Produto</a>
+      <form id="open--modal" class="form--modal--open" action="">
             <div class="form--display--row form--title">
                   <h3>Cadastro de Produto</h3>
-                  <button>X</button>
+                  <a href="#">X</a>
             </div>
             <div class="form--display--column">
                   <label for="nome">Nome do Produto</label>
-                  <input type="text" name="nome" placeholder="Digitar o nome">
+                  <input class="form--input" type="text" name="nome" placeholder="Digitar o nome">
             </div>      
             <div class="form--display--column">
                   <label for="produto">Descrição</label>
-                  <textarea name="produto" id="" cols="30" rows="10" placeholder="Digitar a descrição"></textarea>
+                  <textarea class="form-input" name="produto" id="" cols="" rows="" placeholder="Digitar a descrição"></textarea>
             </div>
 
             
-            <div class="form--display--column">
+            <div class="form--display--column form--checkbox">
                   <label for="">Categorias</label>
                   <div>                  
                         <input type="checkbox" name="Panificadora" placeholder="Panificadora">
@@ -44,15 +44,15 @@
 
             <div class="form--display--column">
                   <label for="price">Valor do Produto</label>
-                  <input type="text" name="price">
+                  <input class="form--input" type="text" name="price" placeholder="Digitar o valor aqui">
             </div class="form--display">
             
             <div class="form--display--column">
                   <label for="image">Link da imagem</label>
-                  <input type="text" name="image">
+                  <input class="form--input" type="text" name="image" placeholder="Inserir link">
             </div>
 
-            <div class="form--display--column">
+            <div class="form--display--column form--button">
                   <button>Cadastrar Produto</button>
             </div>
             
