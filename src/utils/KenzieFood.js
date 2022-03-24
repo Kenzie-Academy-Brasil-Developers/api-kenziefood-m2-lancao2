@@ -27,7 +27,7 @@ export const KenzieFood = class {
       return response
   }
 
-  static async login (userData){
+  static async login (userData) {
     
     const response = await fetch(`${KenzieFood.url}login`, {
       "method": "POST",
@@ -35,13 +35,13 @@ export const KenzieFood = class {
           "Content-Type" : "application/json"
       },
       "body":JSON.stringify(userData)
-  })
-    .then(response => response.ok 
-      ? response.json() 
-      : (() => {throw new Error(response.json())})())
-    .catch(error => console.log(error))
+    })
+      .then(response => response.json())
+      .catch(error => error)
 
-    console.log(response)
-    // localStorage.setItem("user_session", responseData)
+    if (response.error) {
+      return console.log(response.error)
+    }
+    localStorage.setItem('userToken', response)
   }
 }
