@@ -27,6 +27,9 @@ const logout = () => {
 const logoutButton = document.querySelector('#logout-button')
 logoutButton.addEventListener('click', logout)
 
+const returnToHomeButton = document.querySelector('.title--logo--black')
+returnToHomeButton.addEventListener('click', () => location.assign('../../index.html'))
+
 
 let click = 0 
 const popup_logout = document.querySelector(".pop-up_logout")
