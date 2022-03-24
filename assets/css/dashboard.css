@@ -263,7 +263,7 @@ main{
 }
 /*Modal de logout*/
 .pop-up_logout{
-    animation: pop-up_logout 1s;
+    animation: pop-up_logout 0.5s;
     position: absolute;
     z-index: 2;
     top: 11%;
@@ -272,13 +272,11 @@ main{
 @keyframes pop-up_logout {
     0%{
         opacity: 0;
-        width: 1vw;
-        height: 2vh;
+        transform:  translateX(100px) translateY(-150px) scale(0.01);
+        
     }
     100%{
         opacity: 1;
-        width: 17vw;
-        height: 36vh;
     }
 }
 
