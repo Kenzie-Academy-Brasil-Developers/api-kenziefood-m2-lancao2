@@ -17,16 +17,29 @@ export class RegisterProducts{
             return productData        
       }
 
-      static showModal(e){
-            console.log(e.target)
-            const form = document.querySelector('#open--modal');
-            if(RegisterProducts.openModal){
-                  form.classList.remove('hidden');
-                  RegisterProducts.openModal = false;
-            }else{
-                  form.classList.add('hidden');
-                  RegisterProducts.openModal = true;
-            }
+      static showModal(e){           
+            const formWrapper = document.querySelector('.form--wrapper');
+      
+            formWrapper.classList.toggle('hidden');
+            
+      }
+
+      static closeModal(e){
+            const button = e.target.classList;
+            
+            const arrayButton = Array.from(button)
+            console.log(arrayButton)
+            for(let i = 0; i < arrayButton.length; i++){
+
+                  if(arrayButton[i] === 'form--wrapper'){
+                        button.toggle('hidden')
+                        break;
+                  }else if(arrayButton[i] === 'form--button'){
+                        e.target.closest('.form--wrapper').classList.toggle('hidden')
+                  } 
+
+            }          
+
       }
 
 }

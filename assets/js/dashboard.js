@@ -44,6 +44,12 @@ userButton.addEventListener("click" , () =>{
 })
 
 
+
+
 const buttonAddProduct = document.querySelector('.btnAddNew');
-console.log(buttonAddProduct)
 buttonAddProduct.addEventListener('click', RegisterProducts.showModal)
+
+
+const formWrapper = document.querySelector('.form--wrapper');
+formWrapper.addEventListener('click', RegisterProducts.closeModal)
+console.log(formWrapper)
