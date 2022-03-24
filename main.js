@@ -11,6 +11,13 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
   if (localStorage.getItem('userToken')) {
     const authToken = localStorage.getItem('userToken')
     const privateProducts = await KenzieFood.getPivateProducts(authToken)
+    const logoutButton = document.querySelector('.user')
+    const loginButton = document.querySelector('.button_login')
+
+    loginButton.classList.toggle('d-none')
+    logoutButton.classList.toggle('d-none')
+
+    logoutButton.addEventListener('click', logout)
 
     ShowCase.showProducts(publicProducts.concat(privateProducts))
     return
@@ -63,6 +70,11 @@ const removeProduct = (event) => {
   if(button.tagName === 'BUTTON' || button.tagName === 'IMG'){
      Cart.removeCart(event)
   }
+}
+
+const logout = () => {
+  localStorage.clear()
+  location.assign('../../src/pages/login.html')
 }
 
 const input = document.querySelector('.title--search')
