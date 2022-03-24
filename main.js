@@ -5,7 +5,7 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
 
 /* ============== Main function ==================*/
 (async () => {
-  const products = await KenzieFood.getProducts()
+  const products = await KenzieFood.getPublicProducts()
   Cart.createProductsInStorage()
   ShowCase.showProducts(products)
 })()
@@ -34,7 +34,7 @@ const filterProducts = async e => {
   const clickedElement = e.target
   
   if (clickedElement.tagName == 'BUTTON') {
-    const products = await KenzieFood.getProducts()
+    const products = await KenzieFood.getPublicProducts()
     ShowCase.filterByCategory(clickedElement.name, products)
   }
 }
