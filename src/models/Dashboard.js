@@ -19,6 +19,8 @@ export class Dashboard {
       modalDelet.style.display = "none"
     })
     // abrir modal deletar produto 
+    const aceptDelete = document.querySelector(".actionDeletButton")
+    const recuseDelete = document.querySelector(".actionNotDeletButton")
     const modalDelet = document.querySelector(".modalDelet")
     const actionDeletopen = document.querySelector(".tabel_list")
 
@@ -28,8 +30,13 @@ export class Dashboard {
       if(intenSelected.tagName === "BUTTON"){
         if(intenSelected.dataset.delete){
           modalDelet.style.display = "flex"
+          aceptDelete.addEventListener("click", () =>{
+            Dashboard.deleteProduct(intenSelected.dataset.delete)
+          })
+          recuseDelete.addEventListener("click" , () =>{
+            modalDelet.style.display = "none"
+          })
 
-          Dashboard.deleteProduct(intenSelected.dataset.delete)
         }
       }
     }) 
