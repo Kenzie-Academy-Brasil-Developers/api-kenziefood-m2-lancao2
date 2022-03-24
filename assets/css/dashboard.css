@@ -57,6 +57,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    cursor: pointer;
     
 }
 .user::before{
@@ -220,6 +221,20 @@ main{
     font-size: 15.5px;
     color: #868E96;
 }
+.tabel_list_iten_description::-webkit-scrollbar {
+    border: 1px solid #FFFFFF;
+    height: 2px;
+
+  }
+  
+  .tabel_list_iten_description::-webkit-scrollbar-thumb {
+    background: #FF2253;   
+    border: none;
+    border-radius: 15px;
+    
+  }
+  
+
 .tabel_list_iten_action{
     margin-right: 31.5px;
 }
@@ -234,6 +249,7 @@ main{
         line-height: 14px;
         font: normal normal normal 25px/1 FontAwesome !important;
         color: #757677;
+        cursor: pointer;
 
 }
 
@@ -243,6 +259,61 @@ main{
     line-height: 14px;
     font: normal normal normal 22.5px/1 FontAwesome !important;
     color: #757677;
+    cursor: pointer;
+}
+/*Modal de logout*/
+.pop-up_logout{
+    animation: pop-up_logout 1s;
+    position: absolute;
+    z-index: 2;
+    top: 11%;
+    right: 2%;
+}
+@keyframes pop-up_logout {
+    0%{
+        opacity: 0;
+        width: 1vw;
+        height: 2vh;
+    }
+    100%{
+        opacity: 1;
+        width: 17vw;
+        height: 36vh;
+    }
+}
+
+.pop-up_logout_conteiner{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column-reverse;
+    background-color: #E9ECEF;
+    width: 17vw;
+    height: 36vh;
+    border-radius: 15px;
+    
+}
+.pop-up_logout_conteiner button{
+    width: 50%;
+    height: 17%;
+    border: none;
+    background-color: #FF2253;
+    color: #E9ECEF;
+    font-size: 20px;
+    border-radius: 50px;
+    font-weight: bold;
+
+}
+.pop-up_logout_user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 
 }
 
