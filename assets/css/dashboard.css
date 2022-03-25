@@ -1,6 +1,10 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+.hidden{
+    visibility: hidden;
+    display: none;
+}
 /*Header Fim*/
 .title--top{
     margin-top: 20px;
@@ -336,11 +340,12 @@ main{
 }
 
 
-form{
+.form__add-product{
       font-family: 'Poppins', sans-serif;
       background-color: white;
-      width: 496px;
-      height: 755px;
+      width: 100%;
+      max-width: 500px;
+      gap: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -409,7 +414,7 @@ label{
 }
 
 .form--input{
-      width: 440px;
+      max-width: 440px;
       height: 52px;
       background-color: #F8F9FA;
       border: 1.5px solid #DEE2E6;
@@ -425,7 +430,7 @@ label{
 }
 
 textarea{
-      width: 440px;
+      max-width: 440px;
       height: 80px;
       background-color: #F8F9FA;
       border: 1.5px solid #DEE2E6;
@@ -631,6 +636,156 @@ textarea::placeholder{
         color: #757677;
 }
 
+/*Modal de Edit*/
+.modal--edit{
+    animation: modal_bg 0.5s;
+    position: fixed;
+    z-index: 2;
+    background-color: #00000088;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    transition: 350ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal--edit--container{
+    animation: pop-up-modal 0.5s;
+    font-family: 'Poppins', sans-serif;
+    width: 496px;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    border-radius: 12px;
+    
+}
+.modal--edit--card{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 28px;
+    box-sizing: border-box;
+   
+}
+.modal--edit--card--top{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    align-items: center;
+}
+
+.modal--edit--card--title{
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.modal--edit--card--close{
+    margin-left: auto;
+    background: #E9ECEF;
+    border-radius: 4px;
+    color: #868E96;
+    width: 31px;
+    height: 30px;
+    border: none;
+    font-size: 14px;
+}
+
+.modal--edit--form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+.modal--edit--form--label{
+    font-family: 'Inter',sans-serif;
+    font-size: 14px;
+    line-height: 0px;
+    color: #212529;
+}
+.modal--edit--form--field::placeholder{
+    color: #868E96;
+}
+
+.modal--edit--form--field{
+    margin-top: 16px;
+    margin-bottom: 40px;
+    background: #F8F9FA;
+    border: 1.5px solid #DEE2E6;;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px 2px 26px 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+}
+.modal--edit--description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 20px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.modal--edit--btnGroup{
+    margin-top: 16px;
+    margin-bottom: 40px
+}
+
+.modal--edit--form--field:focus{
+    background: #FFFFFF;
+    border-color:#212529;
+}
+
+.modal--edit--buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 8px;
+}
+.modal--edit--buttons button{
+    border-radius: 32px;
+    border-style: solid;
+    border-width: 1.5px;
+    padding: 15px 20px;
+    width:100%;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.modal--edit--buttons--delete{
+    background: #F8F9FA;
+    border-color: #F8F9FA;
+
+    color:  #868E96;
+}
+
+.modal--edit--buttons--save{
+    background: #FF2253;
+    border-color: #FF2253;
+    color: #F8F9FA;
+
+}
+
+@keyframes pop-up-modal {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 10%;
+    }    
+}
 
 @media (min-width: 575px){
     .title--top{
@@ -661,6 +816,7 @@ textarea::placeholder{
         font-size: 15px;
         
     }
+<<<<<<< HEAD
 
     button, input, textarea{
         padding: 0;
@@ -682,3 +838,6 @@ textarea::placeholder{
 }
 
 
+=======
+}
+>>>>>>> editarProduto

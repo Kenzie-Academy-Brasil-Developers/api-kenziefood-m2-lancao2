@@ -72,5 +72,4 @@ const createDashboardCard = ({ imagem, categoria, descricao, nome, id, preco }) 
 
     return card
 } 
-
 export { createCard, createCartCard, createDashboardCard }

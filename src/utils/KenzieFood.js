@@ -1,3 +1,4 @@
+import { Dashboard } from "../models/Dashboard.js"
 import { ShowCase } from "../models/Showcase.js"
 
 export const KenzieFood = class {
@@ -51,6 +52,27 @@ export const KenzieFood = class {
     localStorage.setItem('userToken', response)
     location.assign('../pages/dashboard.html')
     }
+  }
+
+  static async editProduct(object,id){
+    const response = await fetch(`https://kenzie-food-api.herokuapp.com/my/products/${id}`, {
+      "method": "PATCH",
+      "headers": {
+          "Content-Type" : "application/json",
+          "Authorization": `Bearer ${localStorage.getItem('userToken')}`
+      },
+      "body":JSON.stringify(object)
+    }).then(response => response.json())
+    .catch(error => error)
+
+  if (response.error){
+    return console.log(response.error)
+  }
+    Dashboard.toogleModalEdit()
+    location.reload()
+   
+
+   return console.log(response)
   }
 
   static createProduct () {
