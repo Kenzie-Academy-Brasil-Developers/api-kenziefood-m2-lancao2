@@ -473,7 +473,9 @@ main #modalButton{
     align-items: center;
     justify-content: center;
 }
-
+button{
+    cursor: pointer;
+}
 @media (min-width: 769px){
     .title--top{
         justify-content: space-between;

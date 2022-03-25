@@ -531,7 +531,27 @@ textarea::placeholder{
       color:white;
       font-size: 16px;
       font-weight: 500;
-}  
+}
+.form--button{
+    border-radius: 5px;
+}
+.form-input{
+    padding-left: 7px;
+    padding-top: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #868E96
+}
+.form--display--column .form-input{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.form--display--row h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
 
 .close--modal{
     display: none;
@@ -539,6 +559,9 @@ textarea::placeholder{
 
 .hidden{
   display: none;
+}
+button{
+    cursor: pointer;
 }
 
 
