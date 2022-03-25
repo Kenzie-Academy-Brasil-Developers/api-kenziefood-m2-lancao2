@@ -112,14 +112,36 @@ body {
   text-decoration: none;
 }
 
-.error--div{
+.error--div--login{
   padding: 10px;
+  background-color: #FFFFFF;
   position: absolute;
-  top: 85%;
-  margin: 0 auto;
-  background: #CED4DA;
   min-height: fit-content;
   min-width: fit-content;
   border-radius: 15px;
   font-size: 1.2rem;
+  box-sizing: border-box;
+  border-bottom: 8px solid #868E96;
+  top: 80%;
+  left: 70%;
+}
+
+.error--div--login--text{
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px 8px 0px 0px;
+  background-color:#F8F9FA;
+  display: flex;
+}
+
+.error--login--button{
+  margin-left: auto;
+  border-radius: 4px;
+  background: #E9ECEF;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: #868E96;
+  width: 31px;
+  height: 30px;
 }
