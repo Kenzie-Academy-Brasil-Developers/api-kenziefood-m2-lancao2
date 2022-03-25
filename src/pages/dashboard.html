@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
     <title>Kenzie Food Página do Administrador</title>
 </head>
@@ -122,6 +123,67 @@
         </div>
         <ul class="tabel_list"></ul>
     </div>
+
+    <div class="modal--edit hidden">
+      <div class="modal--edit--container">
+         <div class="modal--edit--card">
+           <div class="modal--edit--card--top">
+             <p class="modal--edit--card--title">
+               Edição de produto
+             </p>
+             <button class="modal--edit--card--close">
+               x
+             </button>
+           </div>
+           <div class="modal--edit--card--info">
+             <form class="modal--edit--form" id="form-edit">
+               <label class="modal--edit--form--label" for="nome">
+                 Nome do Produto
+               </label>
+                 <input id="edit--name" type="text" name="nome" class="modal--edit--form--field">
+               <label class="modal--edit--form--label" for="descricao">
+                 Descrição
+               </label>
+               <input id="edit--descricao" type="text" name="descricao" class="modal--edit--form--field modal--edit--description">
+               <label for="edit--selectGroup" class="modal--edit--form--label">
+                 Categorias
+               </label>
+               <div class="modal--edit--btnGroup">
+                 <input type="checkbox" id="edit--panificadora" name="categoria" value="panificadora">
+                 <label for="edit--panificadora">
+                   Panificadora
+                 </label>
+                 <input type="checkbox" id="edit--frutas" name="categoria" value="frutas">
+                 <label for="edit--frutas">
+                   Frutas
+                 </label>
+                 <input type="checkbox" id="edit--bebidas" name="categoria" value="bebidas">
+                 <label for="edit--bebidas">
+                   Bebidas
+                 </label>
+               </div>
+               <label for="preco" class="modal--edit--form--label">
+                 Valor do Produto
+               <input type="text" id="edit--preco" name="preco" class="modal--edit--form--field">
+               </label>
+               <label for="imagem" class="modal--edit--form--label">
+                 Link da imagem
+               </label>
+               <input type="text" name="imagem" id="edit--imagem" class="modal--edit--form--field">
+             </form>
+             <div class="modal--edit--buttons">
+               <button class="modal--edit--buttons--delete">
+                 Excluir
+               </button>
+               <button form="form-edit" class="modal--edit--buttons--save">
+                 Salvar Alterações
+               </button>
+             </div>
+           </div>
+         </div>
+      </div>
+      </div>
+
 </main>
 <div class="modalDelet">
   <div class="modalDelet_box">
