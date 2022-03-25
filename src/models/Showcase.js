@@ -30,16 +30,23 @@ export class ShowCase {
 
   static modalErrorLogin(error){
     let div = document.createElement("div")
+    let button = document.createElement("button")
+    button.classList.add("error--login--button")
+    button.innerText = "X"
     div.classList.add("error--div--login")
+    let divtext = document.createElement("div")
+    divtext.classList.add("error--div--login--text")
     let errorMessage = document.createElement("p")
     errorMessage.classList.add("error--text--login")
     let errorType = document.createElement("p")
     errorType.classList.add("error--text--login")
     errorType.innerText = error
     errorMessage.innerText = `Não foi possível fazer login.`
-    div.appendChild(errorMessage)
+    div.appendChild(divtext)
+    divtext.appendChild(errorMessage)
+    divtext.appendChild(button)
     div.appendChild(errorType)
     document.body.appendChild(div)
-    window.addEventListener("keydown", ()=> document.body.removeChild(div),{once : true})
+    button.addEventListener("click", ()=> document.body.removeChild(div))
   }
 }
