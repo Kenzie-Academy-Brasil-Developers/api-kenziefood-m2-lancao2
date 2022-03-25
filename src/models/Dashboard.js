@@ -34,9 +34,16 @@ export class Dashboard {
           modalDelet.style.display = "flex"
           aceptDelete.addEventListener("click", () =>{
             Dashboard.deleteProduct(intenSelected.dataset.delete)
+            modalDelet.style.display = "none"
+            Dashboard.popup_success()
+            
+            location.reload()
+            
+
           })
           recuseDelete.addEventListener("click" , () =>{
             modalDelet.style.display = "none"
+
           })
 
         }
@@ -63,7 +70,9 @@ export class Dashboard {
       .then(response => response.json())
       .catch(error => error)
 
-    if (response.error) return console.log(response.error)
+     response.error 
+      ? console.log(response.error)
+      : location.reload()
     
     console.log(response)
   }
@@ -71,7 +80,7 @@ export class Dashboard {
   static async deleteProduct (id) {
 
     const authToken = localStorage.getItem('userToken')
-    await fetch(`https://kenzie-food-api.herokuapp.com/my/products/${id}`, {
+    const response = await fetch(`https://kenzie-food-api.herokuapp.com/my/products/${id}`, {
       method: 'DELETE',
       headers: {
         "Content-Type": "application/json",
@@ -80,6 +89,10 @@ export class Dashboard {
     })
       .then(response => response.json())
       .catch(error => error)
+
+    response.error 
+      ? console.log(response.error)
+      : location.reload()
   }
 
   static toogleModalEdit(){

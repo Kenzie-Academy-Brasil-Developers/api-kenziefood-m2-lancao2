@@ -537,7 +537,27 @@ textarea::placeholder{
       color:white;
       font-size: 16px;
       font-weight: 500;
-}  
+}
+.form--button{
+    border-radius: 5px;
+}
+.form-input{
+    padding-left: 7px;
+    padding-top: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #868E96
+}
+.form--display--column .form-input{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.form--display--row h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
 
 .close--modal{
     display: none;
@@ -545,6 +565,9 @@ textarea::placeholder{
 
 .hidden{
   display: none;
+}
+button{
+    cursor: pointer;
 }
 
 
@@ -636,6 +659,90 @@ textarea::placeholder{
         font: normal normal normal 14px/1 FontAwesome !important;
         color: #757677;
 }
+.pop-up_success_delet{
+    animation: pop-up 4s;
+    width: 496px;
+    height: 135px;
+    background-color: #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    top: 80vh;
+    left: 65vw;
+    z-index: 2;
+    position: fixed;
+    
+    
+
+}
+.pop-up_success_delet_header{
+    background-color: #F8F9FA;
+    width: 496px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+
+}
+.pop-up_success_delet_header p{
+    margin-left: 28px;
+
+}
+.txt_pop-up_success_delet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 57px;
+}
+.pop-up_success_delet_footer{
+    height: 8px;
+    background-color:  #39DF8F;
+    border-radius: 0px 0px 8px 8px;
+}
+
+@keyframes pop-up{
+    0%{
+        opacity: 1;
+        top: 100vh;
+    }
+    25%{
+        opacity: 1;
+        top: 80vh;
+        
+    }
+    50%{
+        opacity: 1;
+        top: 80vh;
+        
+    }
+    75%{
+        opacity: 1;
+        top: 80vh;
+        
+    }
+    100%{
+        opacity: 1;
+        top: 100vh;
+    }
+
+
+
+}
+@keyframes pop-dow{
+    0%{
+        top: 80vh;
+    }
+    25%{
+        top: 100vh;
+    }
+}
+
+
 
 /*Modal de Edit*/
 .modal--edit{
