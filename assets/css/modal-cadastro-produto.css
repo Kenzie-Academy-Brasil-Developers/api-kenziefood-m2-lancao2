@@ -1,0 +1,215 @@
+button, input, textarea{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+      height: 100vh;
+      width: 100vw;
+      z-index: 9999;
+      position: absolute;
+}
+
+form{
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      width: 496px;
+      height: 755px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 8px;
+      display: none;
+      position: absolute;
+}
+
+.form--modal--open:target{
+      display: flex;
+}
+
+/* .form--modal--close:target{
+      display: none;
+} */
+
+.form--display--column{
+      display: flex;
+      flex-direction: column;
+      margin: 0 28px;
+}
+
+.form--display--row{
+      display: flex;
+      margin: 0 28px;
+}
+
+.form--display--row:first-child{
+      margin: 0;
+}
+
+.form--title{
+      height: 70px;
+      background-color: #F8F9FA;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px 8px 0 0;
+}
+
+.form--title h3{
+      margin-left: 28px;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--title a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin-right: 28px;
+      border: none;
+      background-color: #E9ECEF;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 400;
+}
+
+label{
+      font-size: 14px;
+      font-weight: 400;
+      color: #212529;
+      margin-bottom: 16px;
+}
+
+.form--input{
+      width: 440px;
+      height: 52px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      padding: 0 20px;
+}
+
+.form--input::placeholder{
+      color: #868E96;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+}
+
+textarea{
+      width: 440px;
+      height: 80px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      resize: none;
+      padding: 10px 20px;
+}
+
+textarea::placeholder{
+      font-family: 'Poppins', sans-serif;
+      color: #868E96;
+      font-size: 16px;
+      font-weight: 400;      
+}
+
+.form--checkbox div{
+      display: flex;
+      justify-content: space-between;
+}
+
+.form--checkbox div label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+      appearance: none;
+}
+
+.form--checkbox div input{
+      appearance: none;
+}
+
+.form--checkbox div #Panificadora::after{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: 'Panificadora';
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Frutas::after{
+      content: 'Frutas';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Bebidas::after{
+      content: 'Bebidas';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Panificadora:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--checkbox div #Frutas:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--checkbox div #Bebidas:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--button button{
+      margin-bottom: 37px;
+      width: 440px;
+      height: 52px;
+      background-color: #FF2253;
+      border: none;
+      border-radius: 32px;
+      color:white;
+      font-size: 16px;
+      font-weight: 500;
+}
+

@@ -28,7 +28,7 @@ export class Cart {
     Cart.removeStorage(button, product)
 
     if(Cart.products.length === 0){
-      localStorage.clear()
+      localStorage.removeItem('@cartProducts')
     }   
 
     Cart.subProducts(product.preco)

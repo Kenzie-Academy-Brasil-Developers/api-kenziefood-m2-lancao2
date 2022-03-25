@@ -5,9 +5,25 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
 
 /* ============== Main function ==================*/
 (async () => {
-  const products = await KenzieFood.getPublicProducts()
+  const publicProducts = await KenzieFood.getPublicProducts()
   Cart.createProductsInStorage()
-  ShowCase.showProducts(products)
+
+  if (localStorage.getItem('userToken')) {
+    const authToken = localStorage.getItem('userToken')
+    const privateProducts = await KenzieFood.getPivateProducts(authToken)
+    const logoutButton = document.querySelector('.user')
+    const loginButton = document.querySelector('.button_login')
+
+    loginButton.classList.toggle('d-none')
+    logoutButton.classList.toggle('d-none')
+
+    logoutButton.addEventListener('click', redirectToAdminPage)
+
+    ShowCase.showProducts(publicProducts.concat(privateProducts))
+    return
+  }
+  
+  ShowCase.showProducts(publicProducts)
 })()
 /* ============== End main function ==============*/
 
@@ -54,6 +70,10 @@ const removeProduct = (event) => {
   if(button.tagName === 'BUTTON' || button.tagName === 'IMG'){
      Cart.removeCart(event)
   }
+}
+
+const redirectToAdminPage = () => {
+  location.assign('../../src/pages/dashboard.html')
 }
 
 const input = document.querySelector('.title--search')

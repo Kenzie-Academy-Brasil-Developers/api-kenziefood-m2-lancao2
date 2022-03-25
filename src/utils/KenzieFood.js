@@ -1,3 +1,4 @@
+import { Dashboard } from "../models/Dashboard.js"
 import { ShowCase } from "../models/Showcase.js"
 
 export const KenzieFood = class {
@@ -7,7 +8,7 @@ export const KenzieFood = class {
     return (await fetch('https://kenzie-food-api.herokuapp.com/products')).json()
   }
 
-  static async getPivateProducts (authToken) {
+  static async getPivateProducts(authToken) {
     const url = 'https://kenzie-food-api.herokuapp.com/my/products'
     const response = await fetch(url, {
       method: 'GET',
@@ -45,12 +46,33 @@ export const KenzieFood = class {
       .catch(error => error)
 
     if (response.error) {
-      return console.log(response.error)
-    }
-
+      ShowCase.modalErrorLogin(response.error)
+    } else {
     localStorage.setItem('userData', JSON.stringify(userData))
     localStorage.setItem('userToken', response)
     location.assign('../pages/dashboard.html')
+    }
+  }
+
+  static async editProduct(object,id){
+    const response = await fetch(`https://kenzie-food-api.herokuapp.com/my/products/${id}`, {
+      "method": "PATCH",
+      "headers": {
+          "Content-Type" : "application/json",
+          "Authorization": `Bearer ${localStorage.getItem('userToken')}`
+      },
+      "body":JSON.stringify(object)
+    }).then(response => response.json())
+    .catch(error => error)
+
+  if (response.error){
+    return console.log(response.error)
+  }
+    Dashboard.toogleModalEdit()
+    location.reload()
+   
+
+   return console.log(response)
   }
 
   static createProduct () {

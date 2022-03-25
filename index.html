@@ -14,6 +14,7 @@
   <!-- styles -->
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/home.css">
+  <link rel="stylesheet" href="./assets/css/redirectModal.css">
   <title>Kenzie food - Home</title>
 </head>
 <body>
@@ -27,6 +28,7 @@
       </p>
       <div class="title-input-login">
         <input type="search" name="Pesquisa Nome" class="title--search" placeholder="Pesquisar por Produto">
+        <div class="user d-none"></div>
         <button class="button_login" onclick="window.location='./src/pages/login.html'">Login</button>
       </div>
     </div>
@@ -80,7 +82,17 @@
       </div>
     </aside>
     <button class="cart_Button_callModel" id="modalButton">  Carrinho</button>
+    <div class="pop-up_logout">
+      <div class="pop-up_logout_conteiner">
+        <button class="pop-up_logout_button" id="logout-button">Logout</button>
+        <div class="pop-up_logout_user">
+          <p>Usuario:</p>
+          <p class="emailSection">email@gmail.com</p>
+        </div>
+      </div>
+    </div>
   </main>
+ 
   <footer></footer>
 <!-- scripts -->
   <script src="https://kit.fontawesome.com/6e9eea67d0.js" crossorigin="anonymous"></script>

@@ -1,6 +1,10 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+.hidden{
+    visibility: hidden;
+    display: none;
+}
 /*Header Fim*/
 .title--top{
     margin-top: 20px;
@@ -48,7 +52,6 @@ body{
     column-gap: 10px;
 }
 
-
 .user{
     background-color: #E9ECEF;
     width: 48px;
@@ -73,6 +76,7 @@ nav{
     flex-direction: column;
     margin: 25px 0px 25px 0px;
 }
+
 nav ul{
     list-style: none;
 }
@@ -82,6 +86,7 @@ nav ul{
   overflow-x: scroll;
 
 }
+
 
 .nav--top::-webkit-scrollbar {
   border: 1px solid #FFFFFF;
@@ -107,7 +112,10 @@ nav ul{
     line-height: 19px;
     text-align: center;
     margin-right: 22px;
+    cursor: pointer;
 }
+
+
 .nav--top:last-child{
     margin-right: 15px;
 }
@@ -134,6 +142,8 @@ nav ul{
 
     border: none;
     border-radius: 50px;
+    cursor: pointer;
+
 
 }
 /*Header Fim*/
@@ -180,7 +190,6 @@ main{
 .tabel_list_iten_product{
     display: flex;
 }
-
 
 .tabel_list_iten_pic img{
     margin-left: 6px;
@@ -267,6 +276,7 @@ main{
     z-index: 2;
     top: 11%;
     right: 2%;
+    display: none;
 }
 @keyframes pop-up_logout {
     0%{
@@ -318,6 +328,465 @@ main{
   display: none;
 }
 
+.form--wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.form__add-product{
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      width: 100%;
+      max-width: 500px;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 8px;
+      position: fixed;
+}
+
+/* .form--modal--open:target{
+      display: flex;
+} */
+
+/* .form--modal--close:target{
+      display: none;
+} */
+
+.form--display--column{
+      display: flex;
+      flex-direction: column;
+      margin: 0 28px;
+}
+
+.form--display--row{
+      display: flex;
+      margin: 0 28px;
+}
+
+.form--display--row:first-child{
+      margin: 0;
+}
+
+.form--title{
+      height: 70px;
+      background-color: #F8F9FA;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px 8px 0 0;
+}
+
+.form--title h3{
+      margin-left: 28px;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--title button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin-right: 28px;
+      border: none;
+      background-color: #E9ECEF;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 400;
+}
+
+label{
+      font-size: 14px;
+      font-weight: 400;
+      color: #212529;
+      margin-bottom: 16px;
+}
+
+.form--input{
+      max-width: 440px;
+      height: 52px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      padding: 0 20px;
+}
+
+.form--input::placeholder{
+      color: #868E96;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+}
+
+textarea{
+      max-width: 440px;
+      height: 80px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      resize: none;
+      padding: 10px 20px;
+}
+
+textarea::placeholder{
+      font-family: 'Poppins', sans-serif;
+      color: #868E96;
+      font-size: 16px;
+      font-weight: 400;      
+}
+
+.form--checkbox div{
+      display: flex;
+      justify-content: space-between;
+}
+
+.form--checkbox div label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+      appearance: none;
+}
+
+.form--checkbox div input{
+      appearance: none;
+}
+
+.form--checkbox div #Panificadora::after{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: 'Panificadora';
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Frutas::after{
+      content: 'Frutas';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Bebidas::after{
+      content: 'Bebidas';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Panificadora:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--checkbox div #Frutas:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--checkbox div #Bebidas:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--button button{
+      margin-bottom: 37px;
+      width: 440px;
+      height: 52px;
+      background-color: #FF2253;
+      border: none;
+      border-radius: 32px;
+      color:white;
+      font-size: 16px;
+      font-weight: 500;
+}  
+
+.close--modal{
+    display: none;
+}
+
+.hidden{
+  display: none;
+}
+
+
+
+/* Modal pra delet um item da API*/
+.modalDelet{
+    background-color: #2125294b;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modalDelet_box{
+    width: 496px;
+    height: 283px;
+    background-color: #FFFFFF;
+    border-radius: 8px 8px 0px 0px;
+}
+.modalDelet_box_conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.headerDeletModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    height: 70px;
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+.modalDelet_box_conteiner_inside{
+    height: 213px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 49px;
+
+}
+.modalDelet_box_conteiner_inside h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.modalDelet_box_conteiner_inside_button{
+    display: flex;
+    column-gap: 20px;
+}
+.modalDelet_box_conteiner_inside_button button{
+    width: 210px;
+    height: 52px;
+    border-radius: 32px;
+    background-color: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    cursor: pointer;
+    color: #868E96;
+    font-size: 16px;
+
+}
+.actionDeletButton:hover{
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+.close_delet{
+    width: 31px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #E9ECEF;
+    border: none;
+    cursor: pointer;
+}
+.close_delet::after{
+        content: "\f00d";
+        font-family: 'Font Awesome 5 Free';
+        line-height: 14px;
+        font: normal normal normal 14px/1 FontAwesome !important;
+        color: #757677;
+}
+
+/*Modal de Edit*/
+.modal--edit{
+    animation: modal_bg 0.5s;
+    position: fixed;
+    z-index: 2;
+    background-color: #00000088;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    transition: 350ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal--edit--container{
+    animation: pop-up-modal 0.5s;
+    font-family: 'Poppins', sans-serif;
+    width: 496px;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    border-radius: 12px;
+    
+}
+.modal--edit--card{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 28px;
+    box-sizing: border-box;
+   
+}
+.modal--edit--card--top{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    align-items: center;
+}
+
+.modal--edit--card--title{
+    font-family: 'Poppins',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.modal--edit--card--close{
+    margin-left: auto;
+    background: #E9ECEF;
+    border-radius: 4px;
+    color: #868E96;
+    width: 31px;
+    height: 30px;
+    border: none;
+    font-size: 14px;
+}
+
+.modal--edit--form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+.modal--edit--form--label{
+    font-family: 'Inter',sans-serif;
+    font-size: 14px;
+    line-height: 0px;
+    color: #212529;
+}
+.modal--edit--form--field::placeholder{
+    color: #868E96;
+}
+
+.modal--edit--form--field{
+    margin-top: 16px;
+    margin-bottom: 40px;
+    background: #F8F9FA;
+    border: 1.5px solid #DEE2E6;;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px 2px 26px 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+}
+.modal--edit--description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 20px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.modal--edit--btnGroup{
+    margin-top: 16px;
+    margin-bottom: 40px
+}
+
+.modal--edit--form--field:focus{
+    background: #FFFFFF;
+    border-color:#212529;
+}
+
+.modal--edit--buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 8px;
+}
+.modal--edit--buttons button{
+    border-radius: 32px;
+    border-style: solid;
+    border-width: 1.5px;
+    padding: 15px 20px;
+    width:100%;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.modal--edit--buttons--delete{
+    background: #F8F9FA;
+    border-color: #F8F9FA;
+
+    color:  #868E96;
+}
+
+.modal--edit--buttons--save{
+    background: #FF2253;
+    border-color: #FF2253;
+    color: #F8F9FA;
+
+}
+
+@keyframes pop-up-modal {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 10%;
+    }    
+}
+
 @media (min-width: 575px){
     .title--top{
         display: flex;
@@ -347,6 +816,28 @@ main{
         font-size: 15px;
         
     }
+<<<<<<< HEAD
+
+    button, input, textarea{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+  }
+  /* body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        position: absolute;
+  } */
+  
 }
 
 
+=======
+}
+>>>>>>> editarProduto
