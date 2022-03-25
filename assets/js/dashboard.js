@@ -16,6 +16,5 @@ const logout = () => {
   localStorage.clear()
   location.assign('../../src/pages/login.html')
 }
-
 const logoutButton = document.querySelector('#logout-button')
 logoutButton.addEventListener('click', logout)

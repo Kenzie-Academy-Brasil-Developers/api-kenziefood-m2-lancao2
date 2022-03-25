@@ -1,16 +1,16 @@
 import { createDashboardCard } from "../utils/functions.js"
-import { createDashboardEdit } from "../utils/functions.js"
 import { KenzieFood } from "./../utils/KenzieFood.js"
 
 export class Dashboard {
   static container = document.querySelector('.tabel_list')
   static products = []
+  static modalEditDelete = document.querySelector(".modal--edit--card--close")
   
-
   static async showProducts (products) {
     console.log(products)
+    this.container.addEventListener("click", openModalEdit);
+    this.modalEditDelete.addEventListener("click", ()=> this.toogleModalEdit())
     Dashboard.products = products
-    this.container.addEventListener("click", openModalEdit, {once: true});
     Dashboard.products.forEach(product => {
       Dashboard.container.innerHTML += createDashboardCard(product)
       
@@ -63,13 +63,21 @@ export class Dashboard {
 
     console.log(response)
   }
+
+  static toogleModalEdit(){
+    document.querySelector(".modal--edit").classList.toggle("hidden");
+  }
+
   static createModalEdit(id){
+    this.toogleModalEdit()
     const product = this.products.find(element => element.id == id)
-    document.querySelector("main").innerHTML += createDashboardEdit(product)
+    const { imagem, descricao, nome, preco } = product
+    document.querySelector("#edit--name").setAttribute("value", nome)
+    document.querySelector("#edit--descricao").setAttribute("value", descricao)
+    document.querySelector("#edit--preco").setAttribute("value", preco)
+    document.querySelector("#edit--imagem").setAttribute("value", imagem)
     const formEdit = document.querySelector(".modal--edit--form")
     formEdit.addEventListener("submit", (event)=> getEditData(event,id))
-    const modalEditDelete = document.querySelector(".modal--edit--card--close")
-    modalEditDelete.addEventListener("click", closeModalEdit)
   }
 }
 
@@ -88,9 +96,4 @@ const openModalEdit = e =>{
     if (clickedElement.className == "action_edit"){
       Dashboard.createModalEdit(productId)
   }
-}
-
-const closeModalEdit = ()=> {
-  document.querySelector(".modal--edit").remove();
-  window.location.reload();
 }
