@@ -14,7 +14,7 @@ export class Dashboard {
     Dashboard.products.forEach(product => {
       Dashboard.container.innerHTML += createDashboardCard(product)
     
-      
+    
     })
     const modalDeletClose = document.querySelector(".close_delet")
     modalDeletClose.addEventListener("click" , () =>{
@@ -89,8 +89,6 @@ export class Dashboard {
     })
       .then(response => response.json())
       .catch(error => error)
-
-    console.log(response)
   }
 
   static toogleModalEdit(){
@@ -108,22 +106,22 @@ export class Dashboard {
     const formEdit = document.querySelector(".modal--edit--form")
     formEdit.addEventListener("submit", (event)=> getEditData(event,id))
   }
+
 }
+
 
 function getEditData(e,id) {
   e.preventDefault()
   const form = new FormData(e.target)
   const productEditData = Object.fromEntries(form.entries())
-  console.log(productEditData)
   KenzieFood.editProduct(productEditData,id)  
 }
 
 const openModalEdit = e =>{
-  console.log("chamou")
   const clickedElement = e.target
   const productId = clickedElement.dataset.edit
     if (clickedElement.className == "action_edit"){
       Dashboard.createModalEdit(productId)
-  }
+    }
 
 }

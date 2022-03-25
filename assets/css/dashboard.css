@@ -328,6 +328,313 @@ main{
   display: none;
 }
 
+.form--wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+form{
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      width: 496px;
+      height: 755px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 8px;
+      position: fixed;
+}
+
+/* .form--modal--open:target{
+      display: flex;
+} */
+
+/* .form--modal--close:target{
+      display: none;
+} */
+
+.form--display--column{
+      display: flex;
+      flex-direction: column;
+      margin: 0 28px;
+}
+
+.form--display--row{
+      display: flex;
+      margin: 0 28px;
+}
+
+.form--display--row:first-child{
+      margin: 0;
+}
+
+.form--title{
+      height: 70px;
+      background-color: #F8F9FA;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px 8px 0 0;
+}
+
+.form--title h3{
+      margin-left: 28px;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--title button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin-right: 28px;
+      border: none;
+      background-color: #E9ECEF;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 400;
+}
+
+label{
+      font-size: 14px;
+      font-weight: 400;
+      color: #212529;
+      margin-bottom: 16px;
+}
+
+.form--input{
+      width: 440px;
+      height: 52px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      padding: 0 20px;
+}
+
+.form--input::placeholder{
+      color: #868E96;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+}
+
+textarea{
+      width: 440px;
+      height: 80px;
+      background-color: #F8F9FA;
+      border: 1.5px solid #DEE2E6;
+      border-radius: 12px;
+      resize: none;
+      padding: 10px 20px;
+}
+
+textarea::placeholder{
+      font-family: 'Poppins', sans-serif;
+      color: #868E96;
+      font-size: 16px;
+      font-weight: 400;      
+}
+
+.form--checkbox div{
+      display: flex;
+      justify-content: space-between;
+}
+
+.form--checkbox div label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+      appearance: none;
+}
+
+.form--checkbox div input{
+      appearance: none;
+}
+
+.form--checkbox div #Panificadora::after{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: 'Panificadora';
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Frutas::after{
+      content: 'Frutas';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Bebidas::after{
+      content: 'Bebidas';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F8F9FA;
+      width: 136px;
+      height: 40px;
+      border-radius: 32px;
+      color: #868E96;
+      font-size: 14px;
+      font-weight: 500;
+}
+
+.form--checkbox div #Panificadora:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--checkbox div #Frutas:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--checkbox div #Bebidas:checked::after{
+      background-color: #FF2253;
+      color: white;
+}
+
+.form--button button{
+      margin-bottom: 37px;
+      width: 440px;
+      height: 52px;
+      background-color: #FF2253;
+      border: none;
+      border-radius: 32px;
+      color:white;
+      font-size: 16px;
+      font-weight: 500;
+}  
+
+.close--modal{
+    display: none;
+}
+
+.hidden{
+  display: none;
+}
+
+
+
+/* Modal pra delet um item da API*/
+.modalDelet{
+    background-color: #2125294b;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modalDelet_box{
+    width: 496px;
+    height: 283px;
+    background-color: #FFFFFF;
+    border-radius: 8px 8px 0px 0px;
+}
+.modalDelet_box_conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.headerDeletModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    height: 70px;
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+.modalDelet_box_conteiner_inside{
+    height: 213px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 49px;
+
+}
+.modalDelet_box_conteiner_inside h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.modalDelet_box_conteiner_inside_button{
+    display: flex;
+    column-gap: 20px;
+}
+.modalDelet_box_conteiner_inside_button button{
+    width: 210px;
+    height: 52px;
+    border-radius: 32px;
+    background-color: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    cursor: pointer;
+    color: #868E96;
+    font-size: 16px;
+
+}
+.actionDeletButton:hover{
+    background-color: #FF2253;
+    color: #F8F9FA;
+}
+.close_delet{
+    width: 31px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #E9ECEF;
+    border: none;
+    cursor: pointer;
+}
+.close_delet::after{
+        content: "\f00d";
+        font-family: 'Font Awesome 5 Free';
+        line-height: 14px;
+        font: normal normal normal 14px/1 FontAwesome !important;
+        color: #757677;
+}
+
 /*Modal de Edit*/
 .modal--edit{
     animation: modal_bg 0.5s;
@@ -505,6 +812,7 @@ main{
         font-size: 15px;
         
     }
+<<<<<<< HEAD
 
     button, input, textarea{
         padding: 0;
@@ -526,3 +834,6 @@ main{
 }
 
 
+=======
+}
+>>>>>>> editarProduto

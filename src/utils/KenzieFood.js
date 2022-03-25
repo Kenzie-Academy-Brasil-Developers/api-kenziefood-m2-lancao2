@@ -1,3 +1,4 @@
+import { Dashboard } from "../models/Dashboard.js"
 import { ShowCase } from "../models/Showcase.js"
 
 export const KenzieFood = class {
@@ -54,7 +55,6 @@ export const KenzieFood = class {
   }
 
   static async editProduct(object,id){
-    console.log(id)
     const response = await fetch(`https://kenzie-food-api.herokuapp.com/my/products/${id}`, {
       "method": "PATCH",
       "headers": {
@@ -64,9 +64,14 @@ export const KenzieFood = class {
       "body":JSON.stringify(object)
     }).then(response => response.json())
     .catch(error => error)
+
   if (response.error){
     return console.log(response.error)
   }
+    Dashboard.toogleModalEdit()
+    location.reload()
+   
+
    return console.log(response)
   }
 
