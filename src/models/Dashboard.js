@@ -49,12 +49,7 @@ export class Dashboard {
     this.showProducts(this.products)
   }
 
-  static async addProduct (e) {
-    e.preventDefault()
-
-    const form = e.target
-    const formData = new FormData(form)
-    const productData = Object.fromEntries(formData.entries())
+  static async addProduct (productData) {
     const authToken = localStorage.getItem('userToken')
 
     const response = await fetch('https://kenzie-food-api.herokuapp.com/my/products', {
@@ -73,19 +68,15 @@ export class Dashboard {
     console.log(response)
   }
 
-  static async deleteProduct () {
-    const form = e.target
-    const formData = new FormData(form)
-    const productData = Object.fromEntries(formData.entries())
-    const authToken = localStorage.getItem('userToken')
+  static async deleteProduct (id) {
 
-    const response = await fetch('https://kenzie-food-api.herokuapp.com/my/products', {
-      method: 'POST',
+    const authToken = localStorage.getItem('userToken')
+    await fetch(`https://kenzie-food-api.herokuapp.com/my/products/${id}`, {
+      method: 'DELETE',
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${authToken}`
       },
-      body: JSON.stringify(productData)
     })
       .then(response => response.json())
       .catch(error => error)
