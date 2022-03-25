@@ -340,11 +340,12 @@ main{
 }
 
 
-form{
+.form__add-product{
       font-family: 'Poppins', sans-serif;
       background-color: white;
-      width: 496px;
-      height: 755px;
+      width: 100%;
+      max-width: 500px;
+      gap: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -413,7 +414,7 @@ label{
 }
 
 .form--input{
-      width: 440px;
+      max-width: 440px;
       height: 52px;
       background-color: #F8F9FA;
       border: 1.5px solid #DEE2E6;
@@ -429,7 +430,7 @@ label{
 }
 
 textarea{
-      width: 440px;
+      max-width: 440px;
       height: 80px;
       background-color: #F8F9FA;
       border: 1.5px solid #DEE2E6;
@@ -652,7 +653,6 @@ textarea::placeholder{
 .modal--edit--container{
     animation: pop-up-modal 0.5s;
     font-family: 'Poppins', sans-serif;
-    height: 755px;
     width: 496px;
     position: fixed;
     z-index: 2;
@@ -664,6 +664,7 @@ textarea::placeholder{
     display: flex;
     flex-direction: column;
     margin: 0px 28px;
+    box-sizing: border-box;
    
 }
 .modal--edit--card--top{
@@ -694,7 +695,10 @@ textarea::placeholder{
 .modal--edit--form{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 500px;
 }
+
 .modal--edit--form--label{
     font-family: 'Inter',sans-serif;
     font-size: 14px;
