@@ -180,9 +180,8 @@ main{
 .tabel_list_iten_product{
     display: flex;
 }
-.tabel_list_iten_pic{
 
-}
+
 .tabel_list_iten_pic img{
     margin-left: 6px;
     height: 58px;
