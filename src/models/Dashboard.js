@@ -32,9 +32,16 @@ export class Dashboard {
           modalDelet.style.display = "flex"
           aceptDelete.addEventListener("click", () =>{
             Dashboard.deleteProduct(intenSelected.dataset.delete)
+            modalDelet.style.display = "none"
+            Dashboard.popup_success()
+            
+            location.reload()
+            
+
           })
           recuseDelete.addEventListener("click" , () =>{
             modalDelet.style.display = "none"
+
           })
 
         }
@@ -72,4 +79,11 @@ export class Dashboard {
     Dashboard.showProducts(products)
   }
 
+  static popup_success(){
+    const popDeleteSuccess = document.querySelector(".pop-up_success_delet")
+    popDeleteSuccess.style.display = "flex"
+  }
+  static resetW(){
+    Dashboard.showProducts(products)
+  }
 }
