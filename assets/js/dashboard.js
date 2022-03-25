@@ -24,7 +24,6 @@ export const logout = () => {
   localStorage.clear()
   location.assign('../../src/pages/login.html')
 }
-
 const logoutButton = document.querySelector('#logout-button')
 logoutButton.addEventListener('click', logout)
 
@@ -51,3 +50,4 @@ buttonAddProduct.addEventListener('click', RegisterProducts.showModal)
 
 const formWrapper = document.querySelector('.form--wrapper');
 formWrapper.addEventListener('click', RegisterProducts.closeModal)
+logoutButton.addEventListener('click', logout)
