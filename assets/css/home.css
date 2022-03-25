@@ -472,7 +472,6 @@ main #modalButton{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
 }
 
 @media (min-width: 769px){
