@@ -19,7 +19,10 @@ import { KenzieFood } from "./src/utils/KenzieFood.js";
 
     logoutButton.addEventListener('click', redirectToAdminPage)
 
-    ShowCase.showProducts(publicProducts.concat(privateProducts))
+    const fullProducts = publicProducts.concat(privateProducts)
+
+    ShowCase.products = fullProducts
+    ShowCase.showProducts(fullProducts)
     return
   }
   
@@ -50,6 +53,16 @@ const filterProducts = async e => {
   const clickedElement = e.target
   
   if (clickedElement.tagName == 'BUTTON') {
+    if (localStorage.getItem('userToken')) {
+      const authToken = localStorage.getItem('userToken')
+      const publicProducts = await KenzieFood.getPublicProducts()
+      const privateProducts = await KenzieFood.getPivateProducts(authToken)
+      const fullProducts = publicProducts.concat(privateProducts)
+
+      ShowCase.filterByCategory(clickedElement.name, fullProducts)
+      return
+    }
+
     const products = await KenzieFood.getPublicProducts()
     ShowCase.filterByCategory(clickedElement.name, products)
   }
